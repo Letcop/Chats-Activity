@@ -1,0 +1,1674 @@
+
+
+a
+{
+    text-decoration: none;
+}
+body
+{
+    background-color: #f8f8fa;
+}
+/*******btn style********/
+    .btn 
+    {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 150px;
+        height: 30px;
+        background-color: #00cf4d;
+        border: 1px solid #00cf4d;
+        border-radius: 50px;
+        color: #12114a;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 500;
+        margin-left: 20px;
+        transition: 0.2s;
+        cursor: pointer;
+    } 
+    .btn:hover 
+    {
+        -webkit-box-shadow: 0 0 10px rgba(0, 207, 77, 1);
+        text-decoration: none;
+        box-shadow: 0 0 10px rgba(0, 207, 77, 1);
+        color: #fff;
+    }
+/*******btn style********/
+
+
+/**********Mob categories********/
+    .mobile__categories 
+    {
+        margin: 5px 5px;
+        display: none;
+        background-color: #fff;
+
+        align-items: center;
+        height: 35px;
+        overflow: hidden;
+
+        justify-content: space-between;
+        text-align: center;
+        flex-direction: column;
+
+        padding: 5px 0;
+
+        border-radius: 20px;
+        border: 1px solid #12114a;
+        text-transform: uppercase;
+
+
+        color: #12114a;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        transition:  all 0.3s linear;
+    }
+    .fa-chevron-down
+    {
+        transition: 0.3s all linear;
+    }
+    .ChevronAnimation
+    {
+        transition: 0.3s all linear;
+        transform:  rotate(-180deg);
+    }
+    .activeDropdown
+    {
+        transition:  all 0.3s linear;
+        height:  95px;
+    }
+    .mob__category .fa-chevron-down
+    {
+        position: absolute;
+        right: 20px;
+        top: 7px;
+    }
+    .hiden__list
+    {
+        overflow: hidden;
+        height: 0;
+    }
+    .mob__category 
+    {
+        margin-bottom: 10px;
+        position: relative;
+    }
+    .mob__category:last-child
+    {
+        margin-bottom: 5px;
+    }
+    .mob__active__category {}
+/**********Mob categories********/
+
+
+/***********SubHeader***********/
+    .subheader 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:  10px 0; 
+    }
+    .title 
+    {
+        color: #ffffff;
+        font-family: Monserrat;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: left;
+    }
+    .category__buttons 
+    {
+        display: flex;
+    }
+    .active__category
+    {
+        color:  #00CF4D;
+        background-color: transparent;
+        border:  1px solid #00CF4D;
+    }
+/***********SubHeader***********/
+/***********Subheader mob***********/
+    .subheader__container 
+    {
+        display: none;
+        flex-direction: column;
+        padding: 10px 0 5px 0;
+        align-items:  flex-start;
+        background-color: #fff;
+
+    }
+    .subheader__mob 
+    {
+        margin-left: 60px;
+
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #12114a;
+        font-size: 20px;
+        font-weight: 700;
+
+        position:relative;
+    }
+    .subheader__mob i 
+    {
+        position:absolute;
+        color: #b1b1b3;
+        left:-30px;
+        top: 5px;
+    }
+    .subheader__subtitle 
+    {
+        text-align: left;
+        color: #253556;
+        font-weight: 400;
+        font-size: 12px;
+        font-weight: 400;
+    }
+/***********Subheader mob***********/
+
+.mob__msg_input{
+    display: none;
+}
+
+
+/*********Tabs*************/
+    
+    
+    .work__chats .tabs__item
+    {
+        width: 100%;
+    }
+
+    .work__chats .tabs__container
+    {
+        width: 70%;
+    }
+    .work__chats .tabs__container .tabs__item
+    {
+        max-width: 250px;
+    }
+    .work__chats .user__status__bar 
+    {
+        width: 30%;
+    }
+
+    .tabs 
+    {
+        padding-top: 10px;
+        background-color: #fff;  
+    }
+    .tabs .conteiner 
+    {
+        display: flex;
+        justify-content: space-between; 
+        align-items: flex-end;
+    }
+    .tabs__container 
+    {   
+        align-items: flex-end;
+        height: 55px;
+        display: flex;
+    }
+    .tabs__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 5px;
+        width: 250px;
+        height: 45px;
+        border-radius: 8px 8px 0 0;
+        background-color: #d5d5d5;
+        
+        color: #253556;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        transition:  all 0.3s linear;
+        cursor: context-menu;
+    }
+    .active__tab
+    {
+        height:  55px;
+        background-color: #00cf4d;
+        transition:  all 0.3s linear;
+        color: white;
+    }
+    .user__status__bar 
+    {
+        color: #253556;
+        font-size: 12px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: left;
+
+    }
+    .name
+    {
+        font-size: 18px;
+        
+    }
+/*********Tabs*************/
+    .animationMessagePlace
+    {
+
+        opacity:  1 !important;
+        transition: all 0.3s linear;       
+    }
+
+/*********Messenger********/
+    .chats 
+    {
+        display:  none;
+        padding-bottom:  50px;
+        opacity:  0;
+        transition: all 0.3s linear;
+
+
+    }
+    .display__block{
+        display: block !important;
+    }
+    .active__chat
+    {
+        display: block;
+        opacity:  1;
+        transition: 0.3s linear;
+    }
+    .chats  .conteiner 
+    { 
+        display: flex; 
+    }
+        /**************CompanionsList**********/
+
+            .companions__list 
+            {
+                width: 30%;
+                height: 515px;
+                overflow-y:  auto;
+                padding-right: 15px;
+            }
+            .companions__list::-webkit-scrollbar
+            {
+                display: none;
+            }
+            .companion {
+                background-color: #eeeeef;
+                display: flex;
+                height: 100px;
+                padding: 13px 20px;
+                align-items: flex-start;
+                cursor: context-menu;
+                position:  relative;
+                margin-bottom: 3px;
+            }
+            .companion:last-child
+            {
+
+                border-radius: 0 0 8px 8px;
+            }
+            .companion__after
+            {
+                display:  none;
+                content: " ";
+                width:  25px;
+                height: 25px;
+                background-color: #fff;
+                position:  absolute;
+                transform:  rotate(45deg);
+                top:  40px;
+                right:  -11px;
+
+                z-index: 10;
+            }
+            .active__companion 
+            {
+                background-color: #fff;
+            }
+            .active__companion .companion__after
+            {
+                
+                display:  block;
+            }
+            .img__container 
+            {
+                width: 27%;    
+            }
+            .img__block 
+            {
+                position: relative;
+                width: 65px;
+                height: 65px;
+            }
+            .userImg
+            {}
+            .indicator
+            {
+                position:  absolute;
+                bottom:  5px;
+                right: 3px;
+            }
+            .companions__name 
+            {
+                width: 56%;
+                color: #253556;
+                font-weight: 400;
+                text-align: left;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: normal;
+
+            }
+            .name 
+            {
+                cursor:  inherit;
+                font-size: 16px;
+            }
+            .nick 
+            {
+                margin: 5px 0;
+                font-size: 12px;
+            }
+            .message__part 
+            {
+                color: #12114a;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .status__bar 
+            {
+                width: 11%;
+            }
+            .time 
+            {
+                color: #616161;
+                font-size: 13px;
+                font-weight: 400;
+                text-align: left;
+                letter-spacing: 0.51px;
+                margin-bottom: 20px;
+            }
+            .recieved__messages 
+            {
+
+            }
+            .cloud 
+            {
+                position: relative;
+                height: 22px;
+                width: 22px;
+            }
+            .messages__number 
+            {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform:  translate(-50%,-50%);
+                color: #616161;
+                font-size: 13px;
+                font-weight: 700;
+                text-align: left;
+                letter-spacing: 0.51px;
+            }
+            .companion .last__seen
+            {
+                display:  none;
+            }
+            .companions__list_opacity
+            {
+                transition: all 0.3s linear;
+                opacity: 0;   
+            }
+        /**************CompanionsList**********/
+    .message__place 
+    {
+        width: 70%;
+        padding-left: 5px;
+    }
+        /***********MessagePlace***********/
+            .btn__section 
+            {
+                text-align: right;
+                padding: 17px 0;
+                border-bottom: 2px solid white;
+
+            }
+            .propose__btn 
+            {
+                cursor: pointer;
+
+                text-transform: uppercase;
+                padding:  5px 25px;
+                border-radius: 17px;
+                border: 1px solid #12114a;
+
+                color: #12114a;
+                font-size: 12px;
+                font-weight: 500;
+                text-align: left;
+            }
+            .messages__block 
+            {
+                padding-right: 10px;    
+                overflow-y: scroll;
+                overflow-x:hidden;    
+                max-height: 405px;
+                padding: 10px 0;
+                padding-top: 30px;
+                padding-right: 10px;
+                margin-bottom: 22px;
+                opacity:  1; 
+                transition: all 0.2s linear;         
+            }
+            .animationForMessageBlock
+            {
+                transition: all 0.2s linear;
+                opacity: 0;
+            }
+            .messages__block::-webkit-scrollbar 
+            { 
+                display: none; 
+            }
+            .message{
+                text-align: center;
+                margin-top: 20px;   
+                position: relative;
+
+
+                color: #0f0e41;
+                font-size: 14px;
+                font-weight: 500;
+                max-width: 55%;
+
+
+                border-radius: 15px;
+                background-color: #ffffff;
+            }
+            .recieved__messages {
+                float:  left;
+                text-align: left;
+
+                padding:  12px 27px 14px 15px;
+            }
+            .acted__time 
+            {
+                position: absolute;
+                top:  -20px;
+
+                color: #253556;
+                font-size: 12px;
+                font-weight: 400;
+                text-align: right;
+            }
+            .recieved__messages .acted__time 
+            {
+                left:  10px;
+            }
+            .textTime 
+            {
+                margin-left: 5px;
+            }
+            .sended__messages 
+            {
+                float:  right;
+                text-align: left;
+                margin-right: 10px;
+                padding:  12px 15px 14px 27px;
+                position: relative;
+            }
+            .sended__messages  .acted__time 
+            {
+                right:  10px;
+            }
+            .double__symbol{
+                height: 12px;
+                width: 12px;   
+                right: -20px;
+                bottom:  20px;
+                position:  absolute;
+            }
+            .checked__symbol 
+            {
+                width: 12px;
+                height: 7px;
+                position: relative;
+                color: #d5d5d5;
+            }
+            .down
+            {   
+                font-size: 13px;
+            }
+            .up
+            {
+                font-size: 10px;
+                position:  absolute;
+                top:  -2px;
+                left:  1px;
+            }
+            .activities__bar 
+            {
+                display: flex;
+            }
+            .typing__indicator 
+            {
+                color: #253556;
+                font-family: Monterrat;
+                font-size: 12px;
+                font-weight: 400;
+                text-align: left;
+                position: absolute;
+                width: 150px;
+                top:  -20px;
+                left:  35px;
+            }
+            .activities__bar .desktop
+            {
+                display: flex;
+                width: 100%;
+            }
+            .emojis 
+            {
+                margin-right: 10px;
+
+            }
+            .emojis  i
+            {
+                font-size: 25px;
+                color: #00cf4d;
+                cursor: pointer;
+            }
+            .input__area
+            {
+                position: relative;
+                width: 100%;
+                display: flex;
+            }
+            .input__area input 
+            {
+                outline:  none;
+                border:  none;
+                padding:  0 20px;
+                width: 100%;
+                height: 34px;
+                border-radius: 15px;
+                background-color: #ffffff;
+                padding-right: 210px;
+
+                color: #0f0e41;
+                font-family: Monserrat;
+            }
+            .input__area input::placeholder
+            {
+                color: #0f0e41;
+                font-family: Monserrat;
+                font-size: 12px;
+                font-weight: 500;
+                text-align: left;
+            }
+            .input__area i
+            {
+                cursor: pointer;
+                position:  absolute;
+                right:  160px;
+                bottom: 10px;
+                color: #b1b1b1;
+            }
+            .input__area .btn 
+            {
+                bottom: 2px;
+                right:  0;
+                position:  absolute;
+            }
+        /***********MessagePlace***********/
+/*********Messenger********/
+
+
+
+
+/*********Contract bar*********/
+    .contract__status_bar 
+    {
+
+        padding: 10px 5px;
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 53px;
+        align-items: center;
+        background-color: #fea2c0;
+        margin-left: -19px;
+        padding-left: 18px;
+        border-radius: 0 0 8px 8px;
+        justify-content: space-around;
+    }
+    .contract__status_bar__text
+    {
+        color: #12114a;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: left;
+    }
+    .contract__status_bar input
+    {
+        width: 100%;
+        color: #12114a;
+        font-family: Monserrat;
+        font-size: 14px;
+        font-weight: 600;
+        outline: none;
+        border: none;
+        padding: 0 7px;
+        margin-left: 5px;
+    }
+    .dedline 
+    {
+        align-items: center;
+        display: flex;
+        margin-right: 10px;
+    }
+    .dedline__input
+    {
+        width: 132px;
+    }
+    .dedline input 
+    {
+
+        height: 30px;
+        border-radius: 15px;
+        background-color: rgba(255,255,255,0.5);
+        font-family: 'Monserrat';
+        outline: none;
+        border: none;
+        padding: 0 7px;
+        color: #12114a;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;
+
+    }
+    ::-webkit-calendar-picker-indicator
+    {   
+        background: url(../img/calendar.svg) no-repeat center;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .price 
+    {
+        margin-right: 10px;
+        align-items: center;
+        display: flex;
+    }
+    .price input{
+        width: 100%;
+        height: 30px;
+        border-radius: 15px;
+        background-color: rgba(255,255,255,0.5);
+        padding-left: 8px;
+        padding-right: 23px
+    }
+    .price__input
+    {
+        width: 98px;
+        position: relative;
+    }
+    .dollar-icon
+    {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 17px;
+    }
+    .payment__subiting 
+    {
+        display: flex;
+        align-items: center;
+    }
+    .payment__status__value {}
+    .payment__subiting .btn 
+    {
+        width: 170px;
+        margin-left: 10px;
+    }
+/*********Contract bar*********/
+
+
+
+
+@media(max-width: 1106px)
+{
+
+/*********Contract bar*********/
+    
+    
+    .payment__subiting 
+    {
+        margin-top: 10px;
+    }
+/*********Contract bar*********/
+}
+
+
+@media(max-width: 1185px)
+    {
+        .companions__list
+        {
+            width: 35%
+        }
+        .message__place
+        {
+            width: 65%
+        }
+    }
+
+@media(max-width: 1111px)
+    {
+    /*********Tabs*************/
+        .tabs 
+        {
+            padding-top: 10px;
+            background-color: #fff;  
+        }
+        .tabs .conteiner 
+        {
+            display: flex;
+            justify-content: space-between; 
+            align-items: flex-end;
+        }
+        .tabs__item {
+            width: 200px;
+        }
+    /*********Tabs*************/
+        .companions__list
+        {
+            width: 35%
+        }
+        .message__place
+        {
+            width: 65%
+        }
+
+
+    }
+
+@media(max-width: 976px)
+    {   
+    /*********Tabs*************/
+        
+        .tabs__item {
+            width: 180px;
+        }
+        .user__status__bar 
+        {
+            color: #253556;
+            font-size: 12px;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: normal;
+            text-align: left;
+
+        }
+        .name
+        {
+            margin-bottom: -5px;
+            font-size: 18px;
+        }
+        .user__nick
+        {
+            margin-bottom: 10px;
+        }
+        .line{
+            display:  none;
+        }
+        .add__info
+        {
+            display: flex;
+            flex-direction: column;
+
+        }
+    /*********Tabs*************/
+    /*********Messenger******/
+        .btn__section
+        {
+            padding:  15px 0;
+        }
+        .companions__list
+        {
+            min-width: 300px;
+            width: auto;
+        }
+        .message__place
+        {
+            width: auto;
+        }
+        .message
+        {
+        }
+    /*********Messenger******/
+
+    }
+
+
+
+@media(max-width: 840px)
+    {
+    /***********SubHeader***********/
+        .subheader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:  10px 0; 
+        }
+        .subheader  .btn{
+            width: 120px;
+            height: 25px;
+        }
+        .title {
+            color: #ffffff;
+            font-family: Monserrat;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: left;
+        }
+        .category__buttons {
+            display: flex;
+        }
+    /***********SubHeader***********/
+    /*********Tabs*************/
+        
+        .tabs__item 
+        {
+            width: 130px;
+        }
+    /*********Tabs*************/
+
+    }
+
+@media(max-width: 768px)
+    {
+    /***********SubHeader***********/
+        .subheader {
+            display: flex;
+            flex-direction: column;
+            padding:  10px 0; 
+            align-items: flex-start;
+        }
+        .subheader  .btn:first-child{
+            margin-left: 0
+        }
+        .category__buttons {
+            margin-top: 10px
+        }
+    /***********SubHeader***********/
+    /*********Tabs*************/
+        .tabs__item 
+        {
+            width: 120px;
+        }
+    /*********Tabs*************/
+    /*********Messenger********/
+        .companions__list
+        {
+            min-width:  265px;
+        }
+        .companion 
+        {
+            padding:  13px 5px;
+        }
+        .input__area input
+        {  
+            padding-right: 123px
+        }
+        .input__area a
+        {
+            width: 100px
+        }
+        .input__area i
+        {
+            right:  110px;
+        }
+    /*********Messenger********/
+
+    }
+
+@media(max-width: 704px)
+    {
+
+        /*********Contract bar*********/
+
+
+        .payment__subiting 
+        {
+            margin-top: 0px;
+        }
+        .price
+        {
+            margin: 10px;
+        }
+        /*********Contract bar*********/
+    }
+@media(max-width: 650px)
+
+    {
+
+
+
+
+        .title
+        {
+            font-size: 28px;
+        }
+        .category
+        {
+            font-size: 12px;
+        }
+        .subheader .btn
+        {
+            width: 100px
+        }
+
+    /*********Tabs*************/
+        .tabs .conteiner 
+        {
+            display: flex;
+            justify-content: space-between; 
+            align-items: flex-end;
+        }
+        .tabs__container 
+        {   
+            width: 100%;
+            align-items: flex-end;
+            height: 55px;
+            display: flex;
+        }
+        .tabs__item {
+            min-width: 90px;
+            width: 100%;
+            max-width: 200px;
+            font-size: 16px;
+        }
+
+        .user__status__bar 
+        {
+            display:  none;
+
+        }
+
+    /*********Tabs*************/
+
+
+    /**************CompanionsList**********/
+        .companions__list
+        {
+            width: 100%
+        }
+        .companion {
+            width: 100%;
+            min-width: 100%;
+        }
+        
+        .btn__section
+        {
+            margin-bottom: 5px   
+        }
+        
+        .img__container 
+        {
+            width: 20%;    
+        }
+        .img__block 
+        {
+            position: relative;
+            width: 45px;
+            height: 45px;
+        }
+        .userImg
+        {
+            width:  45px;
+            height:  45px;
+        }
+        .indicator
+        {
+            position:  absolute;
+            bottom:  5px;
+            right: 1px;
+        }
+        .companions__name 
+        {
+            width: 65%;
+            color: #253556;
+            font-weight: 400;
+            text-align: left;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+
+        }
+        .companion .name 
+        {
+            cursor:  inherit;
+            font-size: 14px;
+        }
+        .companion .nick 
+        {
+            margin: 8px 0;
+            font-size: 10px;
+        }
+        .message__part 
+        {
+            color: #12114a;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .status__bar 
+        {
+            width: 11%;
+        }
+        .companion .time 
+        {
+            font-size: 12px;
+        }
+        .companion .last__seen
+        {
+            display: inline-block;
+            font-size: 10px;
+        }
+        .companion .message__part
+        {
+            display:  none;
+        }
+        .propose__btn
+        {
+            padding: 5px 10px;
+        }
+        .message
+        {
+            font-size: 12px;
+        }
+
+    /**************CompanionsList**********/
+    }
+@media(max-width: 624px)
+{
+    .dnone
+    {
+        display: none;
+    }
+}
+@media(max-width: 560px)
+
+    {
+        .work__chats .pay__status
+        {
+            display: block !important;
+        }
+        .work__chats .activities__bar .pay__btn
+        {
+            position: absolute;
+            top: -40px;
+            width: 180px;
+            left: 45%;
+            transform: translateX(-50%);
+        }
+        .work__chats .tabs__container
+        {
+            width: 100%;
+        }
+        .work__chats .payment__subiting .pay__btn
+        {
+            display: none;
+        }
+
+        body
+        {
+            background-color: #fff;
+        }
+        .mobile__categories 
+        {
+            display: block;
+        }
+
+
+        .tabs .conteiner
+        {
+            padding: 0!important; 
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0;
+            padding:  0 3px !important;
+        }
+        .chats .conteiner
+        {
+            padding: 0!important; 
+            margin: 0  !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        .tabs__item:last-child
+        {
+            margin-right: 0;
+        }
+        .chats
+        {
+            padding-bottom: 0;
+        }
+        .companions__list
+        {
+            max-height: 100%;
+            height: auto;
+            padding-right: 0;
+        }
+        body .conteiner
+        {
+
+        }
+
+        .display__none
+        {
+            display: none !important;
+        }
+        .tabs__item:first-child
+        {
+            text-transform: capitalize;
+        }
+        /***********SubHeader***********/
+            .subheader__container
+            {
+                display: flex;
+            }
+            .subheader 
+            {
+                display: none;
+            }
+
+        /***********SubHeader***********/
+        .message__place
+        {
+            padding-left: 0;
+            opacity:  0;
+            display: none;
+            transition: all 0.3s linear;
+        }
+        .message__block
+        {
+            padding-left: 5px;
+        }
+        /*****************************Companions List*********/
+        .companion {
+            background-color: #eeeeef;
+            display: flex;
+            height: 100px;
+            padding: 13px 20px;
+            align-items: flex-start;
+            cursor: context-menu;
+            position:  relative;
+            margin-bottom: 3px;
+        }
+        .companion:last-child
+        {
+
+            border-radius: 0 0 8px 8px;
+        }
+        .companion__after
+        {
+            display:  none;
+            content: " ";
+            width:  25px;
+            height: 25px;
+            background-color: #fff;
+            position:  absolute;
+            transform:  rotate(45deg);
+            top:  40px;
+            right:  -11px;
+
+            z-index: 10;
+        }
+        .active__companion 
+        {
+            background-color: #fff;
+        }
+        .active__companion .companion__after
+        {
+            
+            display:  none;
+        }
+        .img__container 
+        {
+            width: 27%;    
+        }
+        .img__block 
+        {
+            position: relative;
+            width: 65px;
+            height: 65px;
+        }
+        .userImg
+        {
+            width: 65px;
+            height: 65px;
+        }
+        .indicator
+        {
+            position:  absolute;
+            bottom:  5px;
+            right: 3px;
+        }
+        .companion .companions__name 
+        {
+            margin-left: 10px;
+            width: 95%;
+            color: #253556;
+            font-weight: 400;
+            text-align: left;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+
+        }
+        .companion .name 
+        {
+            cursor:  inherit;
+            font-size: 16px;
+        }
+        .companion .nick 
+        {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .companion .message__part 
+        {
+            color: #12114a;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .status__bar 
+        {
+            width: 11%;
+        }
+        .time 
+        {
+            color: #616161;
+            font-size: 13px;
+            font-weight: 400;
+            text-align: left;
+            letter-spacing: 0.51px;
+            margin-bottom: 20px;
+        }
+        .recieved__messages 
+        {
+
+        }
+        .cloud 
+        {
+            position: relative;
+            height: 22px;
+            width: 22px;
+        }
+        .messages__number 
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:  translate(-50%,-50%);
+            color: #616161;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: left;
+            letter-spacing: 0.51px;
+        }
+        .companion .last__seen
+        {
+            display:  none;
+        }
+        .companion .message__part
+        {
+             font-weight: 600;
+            display: block;
+        }
+        /*****************************Companions List*********/
+        /**************************Message Area*************/
+            .companions__list
+            {
+                display: block;
+            }
+            .tabs
+            {
+                /* display: none; */
+            }
+             .message__place 
+            {
+                width: 100%;
+                padding-left: 0px;
+            }
+        /***********MessagePlace***********/
+            .btn__section 
+            {
+                text-align: right;
+                padding: 17px 0;
+                border-bottom: none;
+            }
+            .propose__btn 
+            {
+                cursor: pointer;
+
+                text-transform: uppercase;
+                padding:  5px 25px;
+                border-radius: 17px;
+                border: 1px solid #12114a;
+
+                color: #12114a;
+                font-size: 12px;
+                font-weight: 500;
+                text-align: left;
+                border: none;
+            }
+            .messages__block 
+            {
+                padding-right: 10px;    
+                height: auto;
+                max-height: 100%;
+                padding: 10px 0;
+                padding-top: 30px;
+                padding-right: 15px;
+                margin-bottom: 22px;
+                padding-left: 5px;
+
+            }
+            .messages__block::-webkit-scrollbar 
+            { 
+                display: none; 
+            }
+            .message{
+                text-align: center;
+                margin-top: 20px;   
+                position: relative;
+
+
+                color: #0f0e41;
+                font-size: 14px;
+                font-weight: 500;
+                max-width: 70%;
+
+
+                border-radius: 15px;
+                background-color: #ffffff;
+            }
+
+            .message:last-child
+            {
+                margin-bottom: 300px;
+            }
+            .recieved__messages {
+                float:  left;
+                text-align: left;
+
+                padding:  12px 27px 14px 15px;
+            }
+            .acted__time 
+            {
+                position: absolute;
+                top:  -20px;
+
+                color: #253556;
+                font-size: 12px;
+                font-weight: 400;
+                text-align: right;
+            }
+            .recieved__messages .acted__time 
+            {
+                left:  10px;
+            }
+            .textTime 
+            {
+                margin-left: 5px;
+            }
+            .sended__messages 
+            {
+                float:  right;
+                text-align: left;
+                margin-right: 10px;
+                padding:  12px 15px 14px 27px;
+                position: relative;
+            }
+            .sended__messages  .acted__time 
+            {
+                right:  10px;
+            }
+            .double__symbol{
+                height: 12px;
+                width: 12px;   
+                right: -20px;
+                bottom:  20px;
+                position:  absolute;
+            }
+            .checked__symbol 
+            {
+                width: 12px;
+                height: 7px;
+                position: relative;
+                color: #d5d5d5;
+            }
+            .down
+            {   
+                font-size: 13px;
+            }
+            .up
+            {
+                font-size: 10px;
+                position:  absolute;
+                top:  -2px;
+                left:  1px;
+            }
+            .desktop
+            {
+                display: none !important;  
+            }
+            .mob__msg_input
+            {
+                display: block;
+                width: 100%;
+            }
+            .mob__msg_input textarea
+            {
+
+                outline:  none;
+                border:  none;
+                width: 100%;
+                border-radius: 15px;
+                background-color: #ffffff;
+                padding: 10px;
+
+                font-size: 14px;
+
+                resize: none;
+                color: #0f0e41;
+                font-family: Monserrat;
+
+
+                width: 100%;
+                height: 90px;
+                border-radius: 15px;
+                background-color: #ffffff;
+            }
+            .mob__msg_input .btn
+            {  
+
+                width: 216px;
+                height: 28px;
+                border-radius: 14px;
+                background-color: #00cf4d;
+                margin: 0;
+
+            }
+            .mob__msg_input .fa-file-alt
+            {
+                color: #12114a;
+                font-size: 20px;
+                margin-left: 15px;
+            }
+            .activities__bar 
+            {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                background: #f8f8fa;
+                padding: 10px 5px;
+                padding-top: 20px;
+                width: 100%;
+
+            }
+            .typing__indicator 
+            {
+                color: #253556;
+                font-family: Monserrat;
+                font-size: 12px;
+                font-weight: 400;
+                text-align: left;
+                position: absolute;
+                top:  -20px;
+                left:  35px;
+            }
+            .emojis 
+            {
+                margin-right: 10px;
+
+            }
+            .emojis  i
+            {
+                font-size: 25px;
+                color: #00cf4d;
+                cursor: pointer;
+            }
+            .input__area
+            {
+                position: relative;
+                width: 100%;
+            }
+            .input__area input 
+            {
+                outline:  none;
+                border:  none;
+                padding:  0 20px;
+                width: 100%;
+                height: 34px;
+                border-radius: 15px;
+                background-color: #ffffff;
+                padding-right: 130px;
+
+                color: #0f0e41;
+                font-family: Monserrat;
+            }
+            .input__area input::placeholder
+            {
+                color: #0f0e41;
+                font-family: Monserrat;
+                font-size: 12px;
+                font-weight: 500;
+                text-align: left;
+            }
+            .input__area i
+            {
+                cursor: pointer;
+                position:  absolute;
+                right:  110px;
+                bottom: 10px;
+                color: #b1b1b1;
+            }
+            .input__area .btn 
+            {
+                bottom: 2px;
+                right:  0;
+                position:  absolute;
+            }
+        /***********MessagePlace***********/
+        /**************************Message Area*************/
+
+           .btn__section
+            {
+                text-align: center;
+                padding: 10px;
+                background-color: #d5d5d5;
+            }
+            .propose__btn
+            {
+                text-decoration: none;
+
+
+                color: #12114a;
+                font-size: 12px;
+                font-weight: 500;;
+                text-align: left;
+                text-transform: uppercase;
+            }
+            .companionsList__subheader .subheader__mob i, 
+            .messenger__subheader .subheader__mob i 
+            {
+                top:1px;
+                font-size: 17px;
+            }
+            .messenger__subheader
+            {
+                display: none;
+            }
+    }
+
+@media(max-width: 370px)
+    {
+        /**************CompanionsList**********/
+            .companions__list
+            {
+                width: 100%;
+            }
+            .companion 
+            {
+                width: 100%;
+                min-width: 100%;
+                padding-left: 3px;
+                padding-right: 3px;
+            }
+            .img__block
+            { 
+                margin:  0 auto;
+
+            }
+
+        /**************CompanionsList**********/
+        .tabs .conteiner
+        {
+            padding: 0!important; 
+            width: 100% !important;
+            max-width: 100% !important;
+            margin: 0;
+            padding:  0 3px !important;
+        }
+        .chats .conteiner
+        {
+            padding: 0!important; 
+            margin: 0  !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+
+
+@media(max-width: 310px)
+    {
+        .subheader__mob i 
+        {
+            left:-20px;
+        }
+
+    }
