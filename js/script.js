@@ -151,26 +151,6 @@ animatioForTypingIndicator(typing,"Timur");
 	}
 
 
-	if(document.body.clientWidth <= 768)
-	{
-		let contract__bar__spans = document.querySelectorAll('.contract__status_bar__text');
-		let payemnt__status = document.querySelector('.payment__status__value');
-		let payment__btn = document.querySelectorAll('.pay__btn');
-
-		if(payment__btn!=undefined)
-		{	
-			payment__btn[0].style.display = 'none'
-
-
-
-			contract__bar__spans[0].innerText = 'до';
-			contract__bar__spans[1].style.display = 'none';
-			contract__bar__spans[2].style.display = 'none'; 
-
-		}	
-	}
-
-
 
 
 	let companionsList__subheader = document.querySelector('.companionsList__subheader');
@@ -229,6 +209,23 @@ animatioForTypingIndicator(typing,"Timur");
 	})
 
 
+
+
+
+
+
+
+
+
+
+	let dedlineText = document.querySelectorAll('.dedline__text');
+
+
+	if(document.body.clientWidth <= 820)
+	{
+		dedlineText[0].innerText = 'до:';
+		dedlineText[1].innerText = 'до:';
+	}
 
 })
 
