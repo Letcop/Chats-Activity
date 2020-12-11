@@ -11,7 +11,6 @@
 </head>
 <body>
 
-
 <!-- header -->
 	<header>
 		<div class="conteiner">
@@ -508,13 +507,16 @@
 	<section class="tabs">
 		<div class="conteiner">
 			<div class="tabs__container">
-				<div class="tabs__item  active__tab"><span class='display__none' style='margin-right: 4px;'>Все </span> чаты <span id = 'messages__quantity'>(33)</span></div>
-				<div class="tabs__item">Друзья <span id = 'messages__quantity'>(5)</span></div>
-				<div class="tabs__item">Поддержка <span id = 'messages__quantity'></span></div>
+				<div class="tabs__item  active__tab"><span class='tab__title'>Все чаты</span><span class = 'messages__quantity'>(33)</span></div>
+				<div class="tabs__item"><span class='tab__title'>Друзья</span> <span class = 'messages__quantity'>(5)</span></div>
+				<div class="tabs__item"><span class='tab__title'>Поддержка</span> <span  class= 'messages__quantity'></span></div>
 			</div>
 			<div class="user__status__bar">
 				<div class='name' id='user__name'>Георгий Петров</div>
-				<div class='add__info'><span class='user__nick'>masteryoda128</span><span class='line'> - </span><span class='last__seen'>последний визит 22 апреля 2020</span></div>
+				<div class='add__info'>
+					<span class='user__nick'>masteryoda128</span>
+					<span class='line-'> - </span><span class='last__seen'>последний визит 22 апреля 2020</span>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -916,16 +918,15 @@
 						<div class="desktop">
 							<div class="emojis"><i class="fas fa-smile"></i></div>
 							<div  class="input__area">
-								<input type="text" placeholder="Написать сообщение">
+								<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
 								<input style='display:none;'  type="file" name="" id ="input__file">
 								<label for="input__file"><i class="fas fa-file-alt"></i></label>
 								<a class="btn">отправить</a>
 							</div>
 						</div>
-						<div class="mob__msg_input">
+						<div class="mob__msg">
 							<textarea type="text" placeholder="Написать сообщение"></textarea>
-							<div style="display: flex; margin-top: 10px;
-							margin-bottom: 5px; justify-content: space-between; align-items: center; padding: 0 15px;">
+							<div class='mob__input__container'>
 								<div class="emojis"><i class="fas fa-smile"></i></div>
 								<a class="btn">отправить</a>
 								<i class="fas fa-file-alt"></i>
@@ -1529,7 +1530,7 @@
 
 
 
-
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
 	<script type="text/javascript" src="js/base(footer, header).js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
