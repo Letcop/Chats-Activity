@@ -287,7 +287,9 @@ animatioForTypingIndicator(typing,"Timur");
 	}
 	let customerSide =document.querySelector('.customer__side');
 	let getPaymentBtn = document.querySelector('.getPayment');
-	confirmBtn.addEventListener('click',()=>{
+	if(confirmBtn!=null || confirmBtn!= undefined)
+	{
+		confirmBtn.addEventListener('click',()=>{
 		payConfirmation = true;
 		for (j in paymentStatusText)
 		{
@@ -297,6 +299,30 @@ animatioForTypingIndicator(typing,"Timur");
 		getPaymentBtn.style.display = 'flex';
 		customerSide.style.justifyContent ='center';
 	})	
+	}
+
+
+
+
+	/***************Popup*******/
+
+	let cover = document.querySelector('.cover');
+	let addFriend = document.querySelectorAll('.add');
+	let friendsPopUp = 
+	{
+		modal: document.querySelector('.modal'),
+		closeBtn: document.querySelector('.closeIcon'),
+		friend: document.querySelectorAll('.friend')
+	}
+
+	let k=0; 
+	for(;k<addFriend.length;k++)
+	{
+		addFriend[k].addEventListener('click',()=>{cover.style.display = 'block';friendsPopUp.modal.style.display = 'flex'})
+	}
+	friendsPopUp.closeBtn.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
+	cover.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
+	/***************Popup*******/
 
 })
 
