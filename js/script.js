@@ -1,6 +1,10 @@
 window.addEventListener('load',()=>{
 
 
+
+
+
+
 /************Анимация перехода категорий************/
 	let categories = document.querySelectorAll('.category');
 	let activeCategory = 'active__category';
@@ -104,7 +108,7 @@ let animatioForTypingIndicator = function(typing, name)
 		},500)
 	}
 }	
-let typing = false;
+let typing = true;
 animatioForTypingIndicator(typing,"Timur");
 
 
@@ -113,12 +117,18 @@ animatioForTypingIndicator(typing,"Timur");
 	/*************Элементы пользователя которые отображаються в правом верхнем углу мессенджера**********/
 	let currentUserElements = 
 	{
-		name: document.querySelector('#user__name'),
+		name: document.querySelector('.user__name'),
 		nick: document.querySelector('.user__nick'),
-		last__seen: document.querySelector('.last__seen')
+		last__seen: document.querySelector('.tabsDate')
 	}
-	
 	/****************************************************************************************************/
+
+	function animationWidthChangingContent(elem)
+	{
+		elem.classList.add('hide__animation');
+		setTimeout(()=>{elem.classList.remove('hide__animation')},200)
+	}
+
 
 
 
@@ -131,6 +141,14 @@ animatioForTypingIndicator(typing,"Timur");
 	let activeCompanion = 'active__companion';
 	let animationMessagePlace = 'animationForMessageBlock';
 	let messagepblock = document.querySelectorAll('.messages__block');
+	let currentCompanionElements = 
+	{
+		name: document.querySelectorAll('.name'),
+		nick: document.querySelectorAll('.nick'),
+		msgPart: document.querySelectorAll('.message__part'),
+		time: document.querySelectorAll('.time'),
+		gotMsg: document.querySelectorAll('.messages__number')
+	}
 
 	for(let i=0; i<companions.length; i++)
 	{
@@ -147,6 +165,12 @@ animatioForTypingIndicator(typing,"Timur");
 			}
 			setTimeout(()=>{messagepblock[activeTabIndex].classList.remove(animationMessagePlace)},300);
 			companions[i].classList.add(activeCompanion);
+
+			currentUserElements.name.innerText = currentCompanionElements.name[i].innerText;
+			currentUserElements.nick.innerText = currentCompanionElements.nick[i].innerText;
+			messagepblock[activeTabIndex].classList.add('hide__animation');
+			setTimeout(()=>{messagepblock[activeTabIndex].classList.remove('hide__animation')},300)
+
 		})
 	}
 
@@ -172,7 +196,7 @@ animatioForTypingIndicator(typing,"Timur");
 				}
 			companions__list[activeTabIndex].style.display ='none';
 			tab.style.display = 'none';
-			messageplace[0].style.display = 'block';
+			messageplace[activeTabIndex].style.display = 'block';
 			mobCategories.style.display = 'none';
 			companionsList__subheader.style.display = 'none';
 			messenger__subheader.style.display = 'block';
@@ -181,7 +205,7 @@ animatioForTypingIndicator(typing,"Timur");
 		messenger__subheader.onclick = function(){
 			companions__list[activeTabIndex].style.display ='block';
 			tab.style.display = 'block';
-			messageplace[0].style.display = 'none';
+			messageplace[activeTabIndex].style.display = 'none';
 			mobCategories.style.display = 'block';
 			companionsList__subheader.style.display = 'block';
 			messenger__subheader.style.display = 'none';
@@ -220,12 +244,59 @@ animatioForTypingIndicator(typing,"Timur");
 
 	let dedlineText = document.querySelectorAll('.dedline__text');
 
-
-	if(document.body.clientWidth <= 820)
+	if(dedlineText[0] != undefined)
 	{
-		dedlineText[0].innerText = 'до:';
-		dedlineText[1].innerText = 'до:';
+		if(document.body.clientWidth <= 820)
+		{
+			dedlineText[0].innerText = 'до:';
+			dedlineText[1].innerText = 'до:';
+		}
 	}
+
+
+	let payBtn = document.querySelectorAll('.pay__btn');
+	let confirmBtn = document.querySelector('.confirmBtn');
+	let payed = false;
+	let paymentStatusText =  document.querySelectorAll('.pay__status');
+	let sendForCheck = document.querySelector('.sendProject')
+	let payConfirmation = false;
+	
+	for(let i=0; i<payBtn.length; i++)
+	{
+		payBtn[i].addEventListener('click',()=>{
+			payed=true;
+			if(payed == true)
+			{
+				let j;
+				for (j in paymentStatusText)
+				{
+					paymentStatusText[j].innerText = 'Зарезервирован';
+				}
+				let n=0;
+				for(;n<payBtn.length;n++)
+				{
+					payBtn[n].style.display = 'none';
+				}
+				confirmBtn.style.display = 'flex';
+				sendForCheck.style.display = 'flex';
+
+
+			}
+
+		});
+	}
+	let customerSide =document.querySelector('.customer__side');
+	let getPaymentBtn = document.querySelector('.getPayment');
+	confirmBtn.addEventListener('click',()=>{
+		payConfirmation = true;
+		for (j in paymentStatusText)
+		{
+			paymentStatusText[j].innerText = 'Отправлен';
+		}
+
+		getPaymentBtn.style.display = 'flex';
+		customerSide.style.justifyContent ='center';
+	})	
 
 })
 
