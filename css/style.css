@@ -24,6 +24,60 @@
         z-index:999999;
         background-color: rgba(0,0,0,0.5);
     }
+
+    .confirmation__popup
+    {
+
+        padding-top: 20px;
+    }
+    .confirmationText {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        color: #ff8fb4;
+        padding: 0 10px;
+        text-align: center;
+        font-weight: 800;
+    }
+    .confirmation__btn__container 
+    {
+        display: flex;
+        text-align: center;
+        margin-top: 40px;
+        justify-content: space-around;
+
+    }
+    .confirmationBtnYes 
+    {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top:1px solid #00cf4d;
+    }
+    .confirmationBtnNO 
+    {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:  #ff8fb4;
+        border: none;
+    }
+    .confirmation__btn__container .btn
+    {
+        margin-left: 0;
+    }
+
+
+
+
+
+
+
+
+
     .add__friend 
     {
         display: flex;
@@ -46,6 +100,12 @@
         color: #253556;
     
     }
+    .confirmation__popup 
+    {
+        width: 50vw;
+        height: 200px;
+    }
+
     .modal__header
     {
         display: flex;
@@ -63,9 +123,9 @@
         right: 15px;
         top: 10px;
         font-size: 25px;
-        color: red !important;
+        color: #ff8fb4 !important;
         font-weight: 900;
-        opacity: 0.3;
+
     }
     .modal__header__title {}
     .friends__container 

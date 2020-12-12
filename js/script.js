@@ -285,6 +285,31 @@ animatioForTypingIndicator(typing,"Timur");
 
 		});
 	}
+
+	let cover = document.querySelector('.cover');
+	let closeConfirmPopup =document.querySelector('.closeConfirmationPopup');
+	let confirmationBtnNO = document.querySelector('.confirmationBtnNO')
+	confirmationBtnNO.addEventListener('click',()=>{
+		confirmationBtnNO.style.backgroundColor = 'rgba(0,0,0,0)';
+		confirmationBtnNO.style.color = '#12114a';
+	})
+
+	closeConfirmPopup.addEventListener('click',()=>
+	{
+		confirmationPopup.popup.style.display = 'none';
+		cover.style.display = 'none';
+
+	})
+	
+	let confirmationPopup = {
+		popup: document.querySelector('.confirmation__popup'),
+		confirmationText: document.querySelector('.confirmationText'),
+		btnYes: document.querySelector('.confirmationBtnYes'),
+		btnNo: document.querySelector('.confirmationBtnNo')
+	}
+
+
+
 	let customerSide =document.querySelector('.customer__side');
 	let getPaymentBtn = document.querySelector('.getPayment');
 	if(confirmBtn!=null || confirmBtn!= undefined)
@@ -295,6 +320,10 @@ animatioForTypingIndicator(typing,"Timur");
 		{
 			paymentStatusText[j].innerText = 'Отправлен';
 		}
+		confirmationPopup.popup.style.display = 'block';
+		cover.style.display = 'block';
+
+
 
 		getPaymentBtn.style.display = 'flex';
 		customerSide.style.justifyContent ='center';
@@ -305,13 +334,11 @@ animatioForTypingIndicator(typing,"Timur");
 
 
 	/***************Popup*******/
-
-	let cover = document.querySelector('.cover');
 	let addFriend = document.querySelectorAll('.add');
 	let friendsPopUp = 
 	{
-		modal: document.querySelector('.modal'),
-		closeBtn: document.querySelector('.closeIcon'),
+		modal: document.querySelector('.add__friend'),
+		FriendcloseBtn: document.querySelectorAll('.closeFriendPopup'),
 		friend: document.querySelectorAll('.friend')
 	}
 
@@ -320,9 +347,12 @@ animatioForTypingIndicator(typing,"Timur");
 	{
 		addFriend[k].addEventListener('click',()=>{cover.style.display = 'block';friendsPopUp.modal.style.display = 'flex'})
 	}
-	friendsPopUp.closeBtn.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
+	friendsPopUp.FrinedcloseBtn.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
 	cover.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
 	/***************Popup*******/
+
+
+
 
 })
 
