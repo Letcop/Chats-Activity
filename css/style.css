@@ -121,7 +121,7 @@
     {  
         position:absolute;
         right: 15px;
-        top: 10px;
+        top: 0px;
         font-size: 25px;
         color: #ff8fb4 !important;
         font-weight: 900;
@@ -798,6 +798,13 @@ body
             right:  0;
             position:  absolute;
         }
+        .FeedBack__chats_tab .companion .name
+        {
+            margin-bottom: 15px;
+        }
+        .companions__name {
+            padding-top: 6px;
+        }
     /***********MessagePlace***********/
 /*********Messenger********/
 
@@ -933,15 +940,36 @@ body
     {
         position: relative;
     }
-    .confirmBtn
+    .confirmation__panel
     {
         display: none;
-       position: absolute;
-        top: -70px;
-        width: 80%;
+        position: absolute;
+        width: 90%;
+        top: -50px;
         left: 50%;
         transform: translateX(-50%);
+        justify-content: space-around;
+    }
+    .confirmation__panel .btn
+    {
+        height: 35px;
+    }
+    .confirmBtn
+    {
+        text-align: center;
+        margin-left: 0;
+        width: 60%;
+    }
+    .rejectBtn{
+        margin-left: 0;
+        text-align: center;
+        background-color: #ff8fb4;
+        border: none;
 
+    }
+    .rejectBtn:hover
+    {
+         box-shadow: 0 0 10px #ff8fb4;
     }
     .sendProject
     {
@@ -1094,6 +1122,10 @@ body
 
 @media(max-width: 870px)
     {
+        .confirmation__popup
+        {
+            width: 80vw;
+        }
         /*******Companions__list*****/
             .companions__list .companion
             {
@@ -1594,7 +1626,7 @@ body
         {
             display: block;
         }
-        .conteiner
+        .chats  .conteiner
             {
                 margin: 0 !important;
                 padding: 0 !important;
@@ -1960,14 +1992,32 @@ body
             {
                 display: none;
             }
+
+
+            .confirmation__popup .modal__header
+            {
+                font-size: 23px;
+            }
     }
 
 @media(max-width: 435px)    
 {
+    .confirmation__popup
+    {
+        width: 98vw;
+        height:250px;
+    }
+    .confirmation__popup .modal__header {
+        font-size: 20px !important;
+    }
     .friends__container .friend{
         width: 98% !important;
 
         margin: 5px auto;
+    }
+    .modal__header .closeIcon
+    {
+        top: 0;
     }
 }
 @media(max-width: 378px)
@@ -1979,6 +2029,11 @@ body
         .customer__chats_tab .contract__status_bar 
         {
             padding-left: 24px !important;
+        }
+        .contractor__chats_tab .contract__status_bar
+        {
+            display: flex;
+            justify-content: center;
         }
 
     }

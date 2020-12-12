@@ -1081,11 +1081,11 @@
 					<div class="contract__status_bar">
 						<div class="dedline">
 							<span class="contract__status_bar__text dedline__text">Дедлайн до:</span>
-							<div class="dedline__input"><input type="date" class="dedline"></div>
+							<div class="dedline__input"><input type="date" class="dedline" id='DateInput'></div>
 						</div>
 						<div class="price">
 							<span class="contract__status_bar__text price__text">Цена: </span>
-							<div class="price__input"><input type="text"><img src="img/dollar.svg" class='dollar-icon' alt=""></div>
+							<div class="price__input"><input type="number" id="inputPrice"><img src="img/dollar.svg" class='dollar-icon' alt=""></div>
 						</div>
 						<div class="payment__subiting">
 							<span class='payment__status contract__status_bar__text dnone'>Платеж: </span>
@@ -1210,7 +1210,10 @@
 					
 					<div class="activities__bar">
 						<a class="pay__btn btn">Отправить платеж</a>
-						<a class='btn confirmBtn'>Подтвердить работу исполнителя</a>
+						<div class="confirmation__panel">
+							<a class='btn confirmBtn'>Подтвердить работу исполнителя</a>
+							<a href="##" class='btn rejectBtn'>Работа не выполнена</a>
+						</div>
 						<div class="div" style='position: relative; width: 0px;'>
 							<div class="typing__indicator">Пишет ... Hamilioner</div>
 						</div>

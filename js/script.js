@@ -256,10 +256,15 @@ animatioForTypingIndicator(typing,"Timur");
 
 	let payBtn = document.querySelectorAll('.pay__btn');
 	let confirmBtn = document.querySelector('.confirmBtn');
+	let confirmPanel = document.querySelector('.confirmation__panel');
 	let payed = false;
 	let paymentStatusText =  document.querySelectorAll('.pay__status');
 	let sendForCheck = document.querySelector('.sendProject')
 	let payConfirmation = false;
+	let contractConditions = {
+		dedline: document.querySelector('#DateInput'),
+		price: document.querySelector('#inputPrice')
+	}
 	
 	for(let i=0; i<payBtn.length; i++)
 	{
@@ -277,9 +282,11 @@ animatioForTypingIndicator(typing,"Timur");
 				{
 					payBtn[n].style.display = 'none';
 				}
-				confirmBtn.style.display = 'flex';
+				confirmPanel.style.display = 'flex';
 				sendForCheck.style.display = 'flex';
 
+				contractConditions.dedline.setAttribute("disabled", "disabled");
+				contractConditions.price.setAttribute("disabled","disabled");
 
 			}
 
@@ -338,7 +345,7 @@ animatioForTypingIndicator(typing,"Timur");
 	let friendsPopUp = 
 	{
 		modal: document.querySelector('.add__friend'),
-		FriendcloseBtn: document.querySelectorAll('.closeFriendPopup'),
+		FriendcloseBtn: document.querySelector('.closeFriendPopup'),
 		friend: document.querySelectorAll('.friend')
 	}
 
@@ -347,8 +354,9 @@ animatioForTypingIndicator(typing,"Timur");
 	{
 		addFriend[k].addEventListener('click',()=>{cover.style.display = 'block';friendsPopUp.modal.style.display = 'flex'})
 	}
-	friendsPopUp.FrinedcloseBtn.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
-	cover.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
+	friendsPopUp.FriendcloseBtn.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
+	cover.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none';
+			confirmationPopup.popup.style.display = 'none';})
 	/***************Popup*******/
 
 
