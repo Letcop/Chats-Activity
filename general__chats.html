@@ -91,6 +91,29 @@
 	</div>
 <!-- Modal__write to friends -->
 
+<!-- modal__confirmation -->
+<div class="modal forbidenWords">
+	<div class="modal__header">
+		<div class="modal__header__title">
+			 Окно подтверждения
+		</div>
+		<i class="fas fa-times-circle closeIcon closeConfirmationPopup" ></i>
+	</div>
+	<div class="confirmationText">
+		В целях сохранения имиджа  а также блабалабалбалабалбалабалбалабалб мы не можем позвлить вам отправить это сообщение
+	</div>
+	<div class="confirmation__btn__container">
+		<div class="btn confirmationBtnYes">
+			понял
+		</div>
+		<div class=" btn confirmationBtnNO">
+			связаться с администрацией 
+		</div>
+		
+	</div>
+</div>
+<!-- modal__confirmation -->
+
 <!-- header -->
 	<header>
 		<div class="conteiner">
@@ -588,7 +611,6 @@
 		<div class="conteiner">
 			<div class="tabs__container">
 				<div class="tabs__item  active__tab"><span class='tab__title'>Все чаты</span><span class = 'messages__quantity'>(33)</span></div>
-				<div class="tabs__item"><span class='tab__title'>Друзья</span> <span class = 'messages__quantity'>(5)</span></div>
 				<div class="tabs__item"><span class='tab__title'>Поддержка</span> <span  class= 'messages__quantity'></span></div>
 			</div>
 			<div class="user__status__bar">
@@ -606,7 +628,7 @@
 <!-- GENERAL CHATS -->
 
 	<!-- messenger all__chats_tab -->
-		<section class="chats all__chats_tab active__chat">
+		<section class="chats all__chats_tab active__chat" id='pos'>
 			<div class="conteiner">
 				<div class="companions__list">
 					<div class="companion active__companion">
@@ -617,7 +639,7 @@
 							</div>
 						</div>
 						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
+							<a class="name">Георгий Петров</a>
 							<div class="nick">masteryoda128</div>
 							<div class="message__part">Привет как дела?</div>
 						</div>
@@ -634,7 +656,7 @@
 						</div>
 						<div class="companion__after"></div>
 					</div>
-					<div class="companion">
+					<div class="companion ">
 						<div class="img__container">
 							<div class="img__block">
 								<img src="img/user__img.png" class="userImg" alt="">
@@ -642,7 +664,7 @@
 							</div>
 						</div>
 						<div class="companions__name">
-							<div class="name">Hello  Петров</div>
+							<a class="name">Георгий Петров</a>
 							<div class="nick">masteryoda128</div>
 							<div class="message__part">Привет как дела?</div>
 						</div>
@@ -659,7 +681,7 @@
 						</div>
 						<div class="companion__after"></div>
 					</div>
-					<div class="companion">
+					<div class="companion ">
 						<div class="img__container">
 							<div class="img__block">
 								<img src="img/user__img.png" class="userImg" alt="">
@@ -667,7 +689,32 @@
 							</div>
 						</div>
 						<div class="companions__name">
-							<div class="name">World Петров</div>
+							<a class="name">Георгий Петров</a>
+							<div class="nick">masteryoda128</div>
+							<div class="message__part">Привет как дела?</div>
+						</div>
+						<div class="status__bar">
+							<div class="time">13:08</div>
+							<div class="cloud__counter">
+								<div class="cloud">
+									<img src="img/cloud.png" alt="">
+									<p class="messages__number">
+										2
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="companion__after"></div>
+					</div>					
+					<div class="companion ">
+						<div class="img__container">
+							<div class="img__block">
+								<img src="img/user__img.png" class="userImg" alt="">
+								<img src="img/active__dot.png" class="indicator" alt="">
+							</div>
+						</div>
+						<div class="companions__name">
+							<a class="name">Георгий Петров</a>
 							<div class="nick">masteryoda128</div>
 							<div class="message__part">Привет как дела?</div>
 						</div>
@@ -684,7 +731,7 @@
 						</div>
 						<div class="companion__after"></div>
 					</div>
-					<div class="companion">
+					<div class="companion ">
 						<div class="img__container">
 							<div class="img__block">
 								<img src="img/user__img.png" class="userImg" alt="">
@@ -692,32 +739,7 @@
 							</div>
 						</div>
 						<div class="companions__name">
-							<div class="name">Georgiy Петров</div>
-							<div class="nick">georgiy</div>
-							<div class="message__part">Привет как дела?</div>
-						</div>
-						<div class="status__bar">
-							<div class="time">13:08</div>
-							<div class="cloud__counter">
-								<div class="cloud">
-									<img src="img/cloud.png" alt="">
-									<p class="messages__number">
-										2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="companion__after"></div>
-					</div>
-					<div class="companion">
-						<div class="img__container">
-							<div class="img__block">
-								<img src="img/user__img.png" class="userImg" alt="">
-								<img src="img/active__dot.png" class="indicator" alt="">
-							</div>
-						</div>
-						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
+							<a class="name">Георгий Петров</a>
 							<div class="nick">masteryoda128</div>
 							<div class="message__part">Привет как дела?</div>
 						</div>
@@ -734,6 +756,34 @@
 						</div>
 						<div class="companion__after"></div>
 					</div>
+					<div class="companion ">
+						<div class="img__container">
+							<div class="img__block">
+								<img src="img/user__img.png" class="userImg" alt="">
+								<img src="img/active__dot.png" class="indicator" alt="">
+							</div>
+						</div>
+						<div class="companions__name">
+							<a class="name">Георгий Петров</a>
+							<div class="nick">masteryoda128</div>
+							<div class="message__part">Привет как дела?</div>
+						</div>
+						<div class="status__bar">
+							<div class="time">13:08</div>
+							<div class="cloud__counter">
+								<div class="cloud">
+									<img src="img/cloud.png" alt="">
+									<p class="messages__number">
+										2
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="companion__after"></div>
+					</div>
+
+
+					
 					<div class="companion add" style='display: flex; align-items: center; justify-content: center;'>
 						<div class="addCompanion" style='display: flex; align-items: center; justify-content: center;'>
 							<div class="img__block" style='justify-content: center; align-items: center; display: flex;'>
@@ -756,11 +806,15 @@
 					<div class="messages__block">
 						<div class="recieved__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
+							<div class='recieved__messages__text'>
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div> 
 						</div>
 						<div class="sended__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							<div class="sended__messages__text">
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div>
 							<div class="double__symbol">
 								<div class="checked__symbol">
 									<i class="fas fa-check up"></i>
@@ -770,11 +824,33 @@
 						</div>
 						<div class="recieved__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
+							<div class='recieved__messages__text'>
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div> 
 						</div>
 						<div class="sended__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							<div class="sended__messages__text">
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div>
+							<div class="double__symbol">
+								<div class="checked__symbol">
+									<i class="fas fa-check up"></i>
+									<i class="fas fa-check down"></i>
+								</div> 
+							</div>							
+						</div>
+						<div class="recieved__messages message">
+							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
+							<div class='recieved__messages__text'>
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div> 
+						</div>
+						<div class="sended__messages message">
+							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
+							<div class="sended__messages__text">
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div>
 							<div class="double__symbol">
 								<div class="checked__symbol">
 									<i class="fas fa-check up"></i>
@@ -784,88 +860,22 @@
 						</div>
 						<div class="recieved__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
+							<div class='recieved__messages__text'>
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div> 
 						</div>
 						<div class="sended__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							<div class="sended__messages__text">
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div>
 							<div class="double__symbol">
 								<div class="checked__symbol">
 									<i class="fas fa-check up"></i>
 									<i class="fas fa-check down"></i>
 								</div> 
 							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
+						</div>												
 					</div>
 					
 					<div class="activities__bar">
@@ -878,14 +888,14 @@
 								<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
 								<input style='display:none;'  type="file" name="" id ="input__file">
 								<label for="input__file"><i class="fas fa-file-alt"></i></label>
-								<a class="btn">отправить</a>
+								<a class="btn sendMessageBtn grey__color">отправить</a>
 							</div>
 						</div>
 						<div class="mob__msg">
-							<textarea type="text" placeholder="Написать сообщение"></textarea>
+							<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
 							<div class='msg__input__container'>
 								<div class="emojis"><i class="fas fa-smile"></i></div>
-								<a class="btn">отправить</a>
+								<a class="btn sendMessageBtn grey__color">отправить</a>
 								<i class="fas fa-file-alt"></i>
 							</div>
 						</div>
@@ -895,317 +905,6 @@
 		</section>
 	<!-- messenger -->
 
-	<!-- messenger  friends__chats_tab-->
-		<section class="chats friends__chats_tab">
-			<div class="conteiner">
-				<div class="companions__list">
-					<div class="companion active__companion">
-						<div class="img__container">
-							<div class="img__block">
-								<img src="img/user__img.png" class="userImg" alt="">
-								<img src="img/active__dot.png" class="indicator" alt="">
-							</div>
-						</div>
-						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
-							<div class="nick">masteryoda128</div>
-							<div class="message__part">Привет как дела?</div>
-						</div>
-						<div class="status__bar">
-							<div class="time">13:08</div>
-							<div class="cloud__counter">
-								<div class="cloud">
-									<img src="img/cloud.png" alt="">
-									<p class="messages__number">
-										2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="companion__after"></div>
-					</div>
-					<div class="companion">
-						<div class="img__container">
-							<div class="img__block">
-								<img src="img/user__img.png" class="userImg" alt="">
-								<img src="img/active__dot.png" class="indicator" alt="">
-							</div>
-						</div>
-						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
-							<div class="nick">masteryoda128</div>
-							<div class="message__part">Привет как дела?</div>
-						</div>
-						<div class="status__bar">
-							<div class="time">13:08</div>
-							<div class="cloud__counter">
-								<div class="cloud">
-									<img src="img/cloud.png" alt="">
-									<p class="messages__number">
-										2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="companion__after"></div>
-					</div>
-					<div class="companion">
-						<div class="img__container">
-							<div class="img__block">
-								<img src="img/user__img.png" class="userImg" alt="">
-								<img src="img/active__dot.png" class="indicator" alt="">
-							</div>
-						</div>
-						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
-							<div class="nick">masteryoda128</div>
-							<div class="message__part">Привет как дела?</div>
-						</div>
-						<div class="status__bar">
-							<div class="time">13:08</div>
-							<div class="cloud__counter">
-								<div class="cloud">
-									<img src="img/cloud.png" alt="">
-									<p class="messages__number">
-										2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="companion__after"></div>
-					</div>
-					<div class="companion">
-						<div class="img__container">
-							<div class="img__block">
-								<img src="img/user__img.png" class="userImg" alt="">
-								<img src="img/active__dot.png" class="indicator" alt="">
-							</div>
-						</div>
-						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
-							<div class="nick">masteryoda128</div>
-							<div class="message__part">Привет как дела?</div>
-						</div>
-						<div class="status__bar">
-							<div class="time">13:08</div>
-							<div class="cloud__counter">
-								<div class="cloud">
-									<img src="img/cloud.png" alt="">
-									<p class="messages__number">
-										2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="companion__after"></div>
-					</div>
-					<div class="companion">
-						<div class="img__container">
-							<div class="img__block">
-								<img src="img/user__img.png" class="userImg" alt="">
-								<img src="img/active__dot.png" class="indicator" alt="">
-							</div>
-						</div>
-						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
-							<div class="nick">masteryoda128</div>
-							<div class="message__part">Привет как дела?</div>
-						</div>
-						<div class="status__bar">
-							<div class="time">13:08</div>
-							<div class="cloud__counter">
-								<div class="cloud">
-									<img src="img/cloud.png" alt="">
-									<p class="messages__number">
-										2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="companion__after"></div>
-					</div>
-					<div class="companion">
-						<div class="img__container">
-							<div class="img__block">
-								<img src="img/user__img.png" class="userImg" alt="">
-								<img src="img/active__dot.png" class="indicator" alt="">
-							</div>
-						</div>
-						<div class="companions__name">
-							<div class="name">Георгий Петров</div>
-							<div class="nick">masteryoda128</div>
-							<div class="message__part">Привет как дела?</div>
-						</div>
-						<div class="status__bar">
-							<div class="time">13:08</div>
-							<div class="cloud__counter">
-								<div class="cloud">
-									<img src="img/cloud.png" alt="">
-									<p class="messages__number">
-										2
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="companion__after"></div>
-					</div>
-					<div class="companion add" style='display: flex; align-items: center; justify-content: center;'>
-						<div class="addCompanion" style='display: flex; align-items: center; justify-content: center;'>
-							<div class="img__block" style='justify-content: center; align-items: center; display: flex;'>
-								<img width='35' height = '35' src="img/Plus.svg" class="userImg" alt="">
-							</div>
-							<div class="addText" >
-								<div class="writeToFriend" style='color:#12114a; font-size: 15px;'>Написать другу</div>
-							</div>
-						</div>
-					</div>
-
-
-				</div>
-				<div class="message__place">
-					
-					
-					<div class="messages__block">
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-						<div class="recieved__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине. 
-						</div>
-						<div class="sended__messages message">
-							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
-							После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
-							<div class="double__symbol">
-								<div class="checked__symbol">
-									<i class="fas fa-check up"></i>
-									<i class="fas fa-check down"></i>
-								</div> 
-							</div>
-						</div>
-					</div>
-					
-					<div class="activities__bar">
-						<div class="div" style='position: relative; width: 0px;'>
-							<div class="typing__indicator">Пишет ... Hamilioner</div>
-						</div>
-						<div class="desktop">
-							<div class="emojis"><i class="fas fa-smile"></i></div>
-							<div  class="input__area">
-								<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
-								<input style='display:none;'  type="file" name="" id ="input__file">
-								<label for="input__file"><i class="fas fa-file-alt"></i></label>
-								<a class="btn">отправить</a>
-							</div>
-						</div>
-						<div class="mob__msg">
-							<textarea type="text" placeholder="Написать сообщение"></textarea>
-							<div class='msg__input__container'>
-								<div class="emojis"><i class="fas fa-smile"></i></div>
-								<a class="btn">отправить</a>
-								<i class="fas fa-file-alt"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-	<!-- messenger  -->
 
 	<!-- messenger  FeedBack__chats_tab -->
 		<section class="chats FeedBack__chats_tab">
@@ -1363,13 +1062,13 @@
 								<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
 								<input style='display:none;'  type="file" name="" id ="input__file">
 								<label for="input__file"><i class="fas fa-file-alt"></i></label>
-								<a class="btn">отправить</a>
+								<a class="btn sendMessageBtn ">отправить</a>
 							</div>						</div>
 						<div class="mob__msg">
-							<textarea type="text" placeholder="Написать сообщение"></textarea>
+							<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
 							<div class='msg__input__container'>
 								<div class="emojis"><i class="fas fa-smile"></i></div>
-								<a class="btn">отправить</a>
+								<a class="btn sendMessageBtn grey__color">отправить</a>
 								<i class="fas fa-file-alt"></i>
 							</div>
 						</div>
@@ -1380,6 +1079,7 @@
 	<!-- messenger -->
 
 <!-- GENERAL CHATS -->
+
 
 
 
