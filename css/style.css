@@ -7,7 +7,14 @@
 }
 
 
-    
+    .sended__messages__text
+    {
+        text-align: right;
+    }
+    .sended__message__text
+    {
+        text-align: left
+    }
     .add
     {
         cursor: pointer;
@@ -635,14 +642,17 @@ body
 
         .messages__block 
         {
-            max-height: 395px;   
-            overflow-y: scroll;
+            max-height: 395px; 
             overflow-x:hidden; 
             opacity:  1; 
             transition: all 0.2s linear;   
             margin-bottom: 20px;    
             padding-right: 15px;  
             height: 100%;
+        }
+        .messages__block::-webkit-scrollbar-thumb {
+            width: 18px;
+            background: yellow;
         }
        .message{
             text-align: center;
@@ -968,7 +978,7 @@ body
     {
         display: none;
         width: 90%;
-        margin: 0 auto;
+        margin: 20px auto;
         padding: 20px 0;
         justify-content: space-around;
     }
@@ -1778,18 +1788,24 @@ body
             .messages__block 
             {
                 padding-right: 10px;    
-                height: auto;
-                max-height: 100%;
+
+                height: 100%;
+                max-height: calc(100vh - 351px);
+
                 padding: 10px 0;
                 padding-top: 30px;
                 padding-right: 15px;
                 margin-bottom: 22px;
                 padding-left: 5px;
+                position: fixed;
 
             }
             .messages__block::-webkit-scrollbar 
             { 
                 display: none; 
+            }
+            body{
+                overflow-y: hidden;
             }
             .message{
                 text-align: center;
@@ -1809,7 +1825,7 @@ body
 
             .message:last-child
             {
-                margin-bottom: 300px;
+                margin-bottom: 100px;
             }
             .recieved__messages {
                 float:  left;
@@ -2057,7 +2073,7 @@ body
     }
     .modal__header .closeIcon
     {
-        top: 0;
+
     }
 }
 @media(max-width: 378px)

@@ -126,10 +126,9 @@ let font =
 
 	if(document.body.clientWidth <=650)
 	{
-		tabItem[0].querySelector(".tab__title").innerText = 'Чаты';
-		if(tabItem[2]!=undefined)
+		if(document.querySelector("#all_chats")!=undefined || document.querySelector("#all_chats")!=null)
 		{
-			tabItem[2].querySelector(".tab__title").innerText = 'Под-ка';
+			document.querySelector("#all_chats").innerText = 'Чаты';
 		}
 	}
 
@@ -381,6 +380,7 @@ animatioForTypingIndicator(typing,"Timur");
 	let cover = document.querySelector('.cover');
 	let closeConfirmPopup =document.querySelector('.closeConfirmationPopup');
 	let confirmationBtnNO = document.querySelector('.confirmationBtnNO')
+
 	if(confirmationBtnNO!=undefined || confirmationBtnNO!= null)
 	{
 		confirmationBtnNO.addEventListener('click',()=>{
@@ -446,7 +446,9 @@ animatioForTypingIndicator(typing,"Timur");
 	}
 	friendsPopUp.FriendcloseBtn.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
 	cover.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none';
-			confirmationPopup.popup.style.display = 'none';})
+			confirmationPopup.popup.style.display = 'none';
+			forbidenWordsModal.style.display ='none';
+			})
 	/***************Popup*******/
 
 
