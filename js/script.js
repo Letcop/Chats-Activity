@@ -345,24 +345,46 @@ animatioForTypingIndicator(typing,"Timur");
 		dedline: document.querySelector('#DateInput'),
 		price: document.querySelector('#inputPrice')
 	}
+	contractConditions.price.addEventListener('input',function () {
+    if (this.value.length > 6) {
+        this.value = this.value.slice(0,6); 
+	    }
+	});
 	let contractorsChat = document.querySelector('.contractor__chats_tab');
 	
 	for(let i=0; i<payBtn.length; i++)
 	{
 		payBtn[i].addEventListener('click',()=>{
 			payed=true;
-			if(payed == true)
+			if(contractConditions.dedline.value=="" || contractConditions.price.value=="" )
 			{
-				let j;
-				for (j in paymentStatusText)
+				if(contractConditions.dedline.value=="" )
 				{
-					paymentStatusText[j].innerText = 'Зарезервирован';
+					contractConditions.dedline.classList.add('shakeAnimation');
+					setTimeout(()=>{contractConditions.dedline.classList.remove('shakeAnimation');},700)
+				}
+				if(contractConditions.price.value=="" )
+				{
+					contractConditions.price.classList.add('shakeAnimation');
+					setTimeout(()=>{contractConditions.price.classList.remove('shakeAnimation');},700)
+				}
+
+			} 
+			else
+			{
+				if(payed == true)
+				{
+					let j;
+					for (j in paymentStatusText)
+					{
+						paymentStatusText[j].innerText = 'Зарезервирован';
+					}
 				}
 				let n=0;
 				for(;n<payBtn.length;n++)
-				{
-					payBtn[n].style.display = 'none';
-				}
+					{
+						payBtn[n].style.display = 'none';
+					}
 				contractorsChat.querySelector('.messages__block').appendChild(confirmPanel);
 				confirmPanel.style.display = 'flex';
 				sendForCheck.style.display = 'flex';
@@ -371,7 +393,7 @@ animatioForTypingIndicator(typing,"Timur");
 				contractConditions.dedline.setAttribute("disabled", "disabled");
 				contractConditions.price.setAttribute("disabled","disabled");
 
-			}
+				}
 
 		});
 	}
@@ -566,6 +588,16 @@ animatioForTypingIndicator(typing,"Timur");
 	}
 
 	/******************Filter**********/
+
+
+
+	/**********Input limitation*****/
+	let limitInput= function () {
+    if (this.value.length > 4) {
+        this.value = this.value.slice(0,4); 
+	    }
+	}
+
 
 
 })

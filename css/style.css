@@ -1,5 +1,29 @@
 
 
+
+        body::-webkit-scrollbar {
+          width: 10px;
+        }
+
+/*        body::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 5px grey;
+                  box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+        }*/
+
+        body::-webkit-scrollbar-thumb {
+          background: #00cf4d;
+          border-radius: 10px;
+        }
+
+
+#inputPrice::-webkit-outer-spin-button,
+#inputPrice::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}    
+
 .hide__animation
 {
     opacity: 0 !important;
@@ -434,13 +458,36 @@ body
         font-size: 18px;
         
     }
-    .companion .companions__name .name
+    .shakeAnimation
     {
-        cursor: pointer;
-
+        animation-name: shake;
+        animation-duration: 0.7s;
+        z-index: 10;
     }
-    .companion .companions__name .name:hover
+    @keyframes shake{
+      0% {
+        transform: translateX(10px);
+      }
+      20% {
+        transform: translateX(-10px);
+      }
+      40% {
+        transform: translateX(10px);
+      }
+      60% {
+        transform: translateX(-10px);
+      }
+      80% {
+        transform: translateX(10px);
+      }
+      100% {
+        transform: translateX(0px);
+      }
+    }
+
+    .companion .companions__name .nick:hover
     {
+        color:#00cf4d;
         text-decoration: underline !important;
     }
 /*********Tabs*************/
@@ -479,6 +526,7 @@ body
         {
             display: none;
         }
+
         .companion 
         {  
             max-width: 366px;
@@ -563,6 +611,15 @@ body
         {
             margin: 5px 0;
             font-size: 12px;
+        }
+        .tabs .user__nick
+        {
+            cursor: pointer;
+        }
+        .tabs .user__nick:hover
+        {
+            color: #00cf4d;
+            text-decoration: underline;
         }
         .message__part 
         {
@@ -650,10 +707,21 @@ body
             padding-right: 15px;  
             height: 100%;
         }
-        .messages__block::-webkit-scrollbar-thumb {
-            width: 18px;
-            background: yellow;
+        .messages__block::-webkit-scrollbar {
+          width: 5px;
         }
+
+        .messages__block::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 5px grey;
+                  box-shadow: inset 0 0 5px grey;
+          border-radius: 10px;
+        }
+
+        .messages__block::-webkit-scrollbar-thumb {
+          background: #00cf4d;
+          border-radius: 10px;
+        }
+
        .message{
             text-align: center;
             margin-top: 20px;   
@@ -1010,9 +1078,9 @@ body
     .sendProject
     {
         display: none;
-
+        margin-left: 0;
         position: absolute;
-        top: -56px;
+        top: -63px;
         width: 80%;
         left: 50%;
         transform: translateX(-50%);
@@ -1120,6 +1188,7 @@ body
             width: 100%;
             display: block;
         }
+
         .tabs .line-
         {
             display: none;
@@ -1464,7 +1533,11 @@ body
         {
             display: none ;
         }
-
+        .messages__block
+        {
+            height: 100%;
+            max-height: calc(100vh - 351px);
+        }
     /*********Messenger********/
 
 
