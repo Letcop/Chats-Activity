@@ -692,7 +692,7 @@ nav a:hover,
     display: none;
 }
 /*===========MEDIA//START==================*/
-
+        
 @media(max-width: 1040px){
     .head__left{
         margin-right: auto;
@@ -1084,6 +1084,7 @@ nav a:hover,
         opacity: 1;
         visibility: visible;
         top: 70px;
+        z-index: 10;
     }
     .media__hide_button a{
         text-transform: uppercase;

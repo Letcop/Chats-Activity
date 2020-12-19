@@ -199,7 +199,8 @@ animatioForTypingIndicator(typing,"Timur");
 	{
 		name: document.querySelector('.user__name'),
 		nick: document.querySelector('.user__nick'),
-		last__seen: document.querySelector('.tabsDate')
+		last__seen: document.querySelector('.tabsDate'),
+		mobName: document.querySelectorAll('.subheder__title')
 	}
 	/****************************************************************************************************/
 
@@ -227,7 +228,7 @@ animatioForTypingIndicator(typing,"Timur");
 		nick: document.querySelectorAll('.nick'),
 		msgPart: document.querySelectorAll('.message__part'),
 		time: document.querySelectorAll('.time'),
-		gotMsg: document.querySelectorAll('.messages__number')
+		gotMsg: document.querySelectorAll('.messages__number'),
 	}
 
 	for(let i=0; i<companions.length; i++)
@@ -243,11 +244,22 @@ animatioForTypingIndicator(typing,"Timur");
 					
 				}
 			}
+
 			setTimeout(()=>{messagepblock[activeTabIndex].classList.remove(animationMessagePlace)},300);
 			companions[i].classList.add(activeCompanion);
+			
+			if(companions[i].classList.contains('company'))
+			{
 
-			currentUserElements.name.innerText = currentCompanionElements.name[i].innerText;
-			currentUserElements.nick.innerText = currentCompanionElements.nick[i].innerText;
+				currentUserElements.mobName[1].innerText = 'Letcop';		
+				currentUserElements.name.innerText ='Letcop';
+
+			}
+			else{
+				currentUserElements.name.innerText = currentCompanionElements.name[i].innerText;
+				currentUserElements.nick.innerText = currentCompanionElements.nick[i].innerText;
+				currentUserElements.mobName[1].innerText = currentCompanionElements.name[i].innerText;	
+			}			
 			messagepblock[activeTabIndex].classList.add('hide__animation');
 			setTimeout(()=>{messagepblock[activeTabIndex].classList.remove('hide__animation')},300)
 
@@ -260,7 +272,7 @@ animatioForTypingIndicator(typing,"Timur");
 	let companionsList__subheader = document.querySelector('.companionsList__subheader');
 	let messenger__subheader = document.querySelector('.messenger__subheader');
 
-	if(document.body.clientWidth <= 560)
+	if(document.body.clientWidth <= 768)
 	{
 
 		for(let i=0; i<companions.length; i++)
@@ -345,16 +357,29 @@ animatioForTypingIndicator(typing,"Timur");
 		dedline: document.querySelector('#DateInput'),
 		price: document.querySelector('#inputPrice')
 	}
-	contractConditions.price.addEventListener('input',function () {
-    if (this.value.length > 6) {
-        this.value = this.value.slice(0,6); 
-	    }
-	});
+	if(contractConditions.price == "" || contractConditions.price==undefined || contractConditions.price== null)
+	{
+	}
+	else
+	{
+		contractConditions.price.addEventListener('input',function () {
+	    if (this.value.length > 6) {
+	        this.value = this.value.slice(0,6); 
+		    }
+		});		
+	}
 	let contractorsChat = document.querySelector('.contractor__chats_tab');
 	
 	for(let i=0; i<payBtn.length; i++)
 	{
 		payBtn[i].addEventListener('click',()=>{
+				if(document.body.clientWidth <= 585 && contractConditions.dedline.value != "" && contractConditions.price.value != "" )
+				{
+					for(let m=0; m<messagepblock.length; m++)
+					{
+						messagepblock[m].style.maxHeight = 'calc(100vh - 351px)';
+					}
+				}
 			payed=true;
 			if(contractConditions.dedline.value=="" || contractConditions.price.value=="" )
 			{
@@ -452,6 +477,7 @@ animatioForTypingIndicator(typing,"Timur");
 
 
 
+
 	/***************Popup*******/
 	let addFriend = document.querySelectorAll('.add');
 	let friendsPopUp = 
@@ -467,10 +493,21 @@ animatioForTypingIndicator(typing,"Timur");
 		addFriend[k].addEventListener('click',()=>{cover.style.display = 'block';friendsPopUp.modal.style.display = 'flex'})
 	}
 	friendsPopUp.FriendcloseBtn.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none'})
-	cover.addEventListener('click',()=>{cover.style.display = 'none';friendsPopUp.modal.style.display = 'none';
-			confirmationPopup.popup.style.display = 'none';
-			forbidenWordsModal.style.display ='none';
-			})
+	cover.addEventListener('click',()=>{
+			cover.style.display = 'none';
+			if(friendsPopUp.modal!= undefined && friendsPopUp.modal!= "" && friendsPopUp.modal!= null)
+			{
+				friendsPopUp.modal.style.display = 'none';
+			}
+			if(confirmationPopup!= undefined && confirmationPopup!= "" && confirmationPopup!= null)
+			{
+				confirmationPopup.style.display = 'none';
+			}
+			if(forbidenWordsModal!= undefined && forbidenWordsModal!= "" && forbidenWordsModal!= null)
+			{
+				forbidenWordsModal.style.display = 'none';
+			}
+		})
 	/***************Popup*******/
 
 
