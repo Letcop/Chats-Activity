@@ -1,6 +1,91 @@
 
-        
+      
 
+      .display_flex
+      {
+        display: flex !important;
+      }
+    /********FIleContainer*****/
+    .file__block
+    {
+        clear: both;
+        padding: 20px 0; 
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .name__text
+    {
+        width: 100px;
+    }
+    .file__container {
+        width: auto;
+        width: 200px;
+        height: 50px;
+        background-color: #d5d5d5;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 10px;
+    }
+    .file-img-container
+    {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    .file-img 
+    {
+        color:#253556;
+        font-size: 20px;
+        width: 40px;
+        height:40px;
+        border-radius: 50%;
+        background-color: #00cf4d;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+    }
+    .fas {}
+    .fa-file {}
+    .file-discription 
+    {
+        padding-left:10px;
+        font-family: 'Monserrat';
+        color: #253556;
+        width: 75%;
+        display: flex;
+        font-size: 12px;
+        flex-direction: column;
+    }
+    .file-name 
+    {
+        font-size: 15px;
+        font-weight: 600;
+        width: 110px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        height: 20px;
+    }
+    .props
+    {
+        width: 60px;
+        display: flex;
+        justify-content: space-between
+    }
+    .file__size {}
+    .file-type{
+
+    }
+    /********FileContainer*****/   
+
+
+    .input__area textarea
+    {
+        resize: vertical;
+    }
     
         .add
         {
@@ -614,12 +699,12 @@ body
         {
             display:  none;
             content: " ";
-            width:  25px;
-            height: 25px;
+            width:  20px;
+            height: 20px;
             background-color: #fff;
             position:  absolute;
             transform:  rotate(45deg);
-            top:  40px;
+            top:  30px;
             right:  -11px;
 
             z-index: 10;
@@ -759,6 +844,11 @@ body
             font-size: 12px;
             font-weight: 500;
             text-align: left;
+        }
+        .propose__btn:hover
+        {
+            color: white;
+            background-color: #12114a;
         }
 
         .messages__block 
@@ -1257,7 +1347,12 @@ body
 
     }
 
-    
+@media(max-width: 1199px)
+{
+    .contractor__chats_tab .messages__block {
+    max-height: calc(100vh - 105px - 60px - 20px - 51px - 34px - 75px);
+    }
+}    
 
 @media(max-width: 1111px)
     {
@@ -1483,6 +1578,7 @@ body
         {
             padding-left: 0;
             justify-content: unset;
+            padding-left: 15px;
         }
         .contract__status_bar div
         {
@@ -1554,7 +1650,7 @@ body
         .activities__bar .pay__btn
 
             {
-                display: flex;
+                display: none;
                 position:absolute;
                 width: 80%;
                 margin: 0;
@@ -1765,6 +1861,29 @@ body
             .companions__list
             {
                 max-width: 100%;
+                width: 90%;
+                margin: 0 auto; 
+            }
+            .companion .img__container
+            {
+                width: 90px;
+            }
+            .companion .companions__name
+            {
+                width: 100%;
+            }
+            .companion .companions__name .message__part
+            {
+                overflow-y:hidden;
+                height: 20px; 
+            }
+            .companion .status__bar
+            {
+                width: 40px;
+                margin-right: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
             }
                 
             .companions__list .companion {
@@ -1928,11 +2047,10 @@ body
                 padding: 10px;
                 font-size: 14px;
 
-                resize: none;
                 color: #0f0e41;
                 font-family: Monserrat;
 
-
+                resize: none;
                 width: 100%;
                 height: 90px;
                 border-radius: 15px;
@@ -2132,7 +2250,11 @@ body
         {
             
             height: 100%;
-            max-height: calc(100vh - 415px);
+            max-height: calc(100vh - 350px);
+        }
+        .FeedBack__chats_tab .messages__block
+        {
+            max-height: calc(100vh - 300px);
         }
         body
         {
@@ -2268,10 +2390,10 @@ body
     {
         display: none;
     }
-    .work__chats .activities__bar .pay__btn
+/*    .work__chats .activities__bar .pay__btn
     {
         display: flex;
-    }
+    }*/
 
 }
 

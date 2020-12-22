@@ -1,6 +1,11 @@
 window.addEventListener('load',()=>{
 
-
+		let confirmationPopup = {
+			popup: document.querySelector('.confirmation__popup'),
+			confirmationText: document.querySelector('.confirmationText'),
+			btnYes: document.querySelector('.confirmationBtnYes'),
+			btnNo: document.querySelector('.confirmationBtnNo')
+		}		
 let filterW = function(el)
 {
 	let isThereForbidenWord = false;
@@ -357,6 +362,34 @@ animatioForTypingIndicator(typing,"Timur");
 		dedline: document.querySelector('#DateInput'),
 		price: document.querySelector('#inputPrice')
 	}
+	if(document.body.clientWidth <= 820 )
+	{
+		if(contractConditions.dedline!=null)
+		{
+			function showPayBtn()
+			{
+				let input= true;
+				for(i in contractConditions)
+				{
+					if(contractConditions[i].value == null || contractConditions[i].value == undefined || contractConditions[i]==" ")
+					{input=false;}
+				}
+				if(input == true)
+				{
+					payBtn[1].classList.add('display_flex');
+				}
+				if(input ==false)
+				{
+					payBtn[1].classList.remove('display_flex');
+				}
+			}
+			contractConditions.dedline.addEventListener('change',showPayBtn);
+			contractConditions.price.addEventListener('change',showPayBtn);
+
+		}
+
+	}
+
 	if(contractConditions.price == "" || contractConditions.price==undefined || contractConditions.price== null)
 	{
 	}
@@ -385,13 +418,13 @@ animatioForTypingIndicator(typing,"Timur");
 			{
 				if(contractConditions.dedline.value=="" )
 				{
-					contractConditions.dedline.classList.add('shakeAnimation');
-					setTimeout(()=>{contractConditions.dedline.classList.remove('shakeAnimation');},700)
+					document.querySelectorAll('.dedline')[1].classList.add('shakeAnimation');
+					setTimeout(()=>{document.querySelectorAll('.dedline')[1].classList.remove('shakeAnimation');},700)
 				}
 				if(contractConditions.price.value=="" )
 				{
-					contractConditions.price.classList.add('shakeAnimation');
-					setTimeout(()=>{contractConditions.price.classList.remove('shakeAnimation');},700)
+					document.querySelectorAll('.price')[1].classList.add('shakeAnimation');
+					setTimeout(()=>{document.querySelectorAll('.price')[1].classList.remove('shakeAnimation');},700)
 				}
 
 			} 
@@ -408,7 +441,7 @@ animatioForTypingIndicator(typing,"Timur");
 				let n=0;
 				for(;n<payBtn.length;n++)
 					{
-						payBtn[n].style.display = 'none';
+						payBtn[n].classList.remove('display_flex');
 					}
 				contractorsChat.querySelector('.messages__block').appendChild(confirmPanel);
 				confirmPanel.style.display = 'flex';
@@ -435,19 +468,17 @@ animatioForTypingIndicator(typing,"Timur");
 			confirmationBtnNO.style.color = '#12114a';
 		})
 
-		closeConfirmPopup.addEventListener('click',()=>
+		if(closeConfirmPopup.popup != null)
 		{
-			confirmationPopup.popup.style.display = 'none';
-			cover.style.display = 'none';
+			closeConfirmPopup.addEventListener('click',()=>
+			{
+				confirmationPopup.popup.style.display = 'none';
+				cover.style.display = 'none';
 
-		})
+			})		
+		}
 		
-		let confirmationPopup = {
-			popup: document.querySelector('.confirmation__popup'),
-			confirmationText: document.querySelector('.confirmationText'),
-			btnYes: document.querySelector('.confirmationBtnYes'),
-			btnNo: document.querySelector('.confirmationBtnNo')
-		}		
+
 	}
 
 
@@ -467,9 +498,9 @@ animatioForTypingIndicator(typing,"Timur");
 		confirmationPopup.popup.style.display = 'block';
 		cover.style.display = 'block';
 
+		alert('Hello world');
 
-
-		getPaymentBtn.style.display = 'flex';
+		getPaymentBtn.classList.add('display_flex');
 		customerSide.style.justifyContent ='center';
 	})	
 	}
@@ -499,10 +530,7 @@ animatioForTypingIndicator(typing,"Timur");
 			{
 				friendsPopUp.modal.style.display = 'none';
 			}
-			if(confirmationPopup!= undefined && confirmationPopup!= "" && confirmationPopup!= null)
-			{
-				confirmationPopup.style.display = 'none';
-			}
+
 			if(forbidenWordsModal!= undefined && forbidenWordsModal!= "" && forbidenWordsModal!= null)
 			{
 				forbidenWordsModal.style.display = 'none';
@@ -636,10 +664,129 @@ animatioForTypingIndicator(typing,"Timur");
 	}
 
 
+var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keyup', function(){
+  if(this.scrollTop > 0){
+    this.style.height = this.scrollHeight + "px";
+  }
+});
+
+
+	function file(name,size,type,fileWay){
+	let message = document.createElement('div');
+	message.classList.add('file__block');
+	message.innerHTML = `									<div class="file__container">
+								<div class="file-img-container">
+									<div class="file-img">
+										<i class="fas fa-file"></i>
+									</div>								
+								</div>
+								<div class="file-discription">
+								<a class="file-name" href="${fileWay}">${name}</a>
+									<div class="props">
+										<span class="file__size">${size}</span>
+										<span class="file-type">${type}</span>									
+									</div>
+								</div>
+							</div>						`
+
+							return message;
+	}
+
+	let inputFile= document.querySelector('#input__file');
+	inputFile.addEventListener('change', ()=>{
+        let temp = inputFile.value;
+        let tempname = new Array();
+        let j = 0;
+        let i = temp.length - 1;
+        while (i >= 0) {
+            if (temp[i] == "\\") {
+                break;
+            }
+
+            tempname[j] = temp[i];
+
+
+            i--;
+            j++;
+        }
+        let rightArr = new Array();
+        let k = 0;
+        let l = tempname.length - 1;
+        while (k < tempname.length) {
+            rightArr[k] = tempname[l];
+            k++;
+            l--;
+
+        }
+        let name = "";
+        let extention ="";
+        let dotIndex;
+        for(let i=0; i<rightArr.length; i++)
+        {
+        	if(rightArr[i]=='.')
+        	{
+        		dotIndex = i;
+        	}
+        }
+        for(let i=0; i<rightArr.length; i++)
+        {
+        	if(i<dotIndex)
+        	{
+        		name+=rightArr[i];
+        	}
+        	else
+        	{
+        		extention+=rightArr[i];
+        	}
+        }
+
+    console.log(extention);    
+		console.log(activeTabIndex);
+		let fileMessage = file(name,'12',extention,'##');
+		console.log(fileMessage);
+		messagepblock[activeTabIndex].appendChild(fileMessage);
+
+	})
+
+
+	function closeModal()
+	{
+		let closeIcons = document.querySelectorAll('.closeIcon');
+		let cover = document.querySelectorAll('.cover');
+		let modals = document.querySelectorAll('.modal');
+		function close(el,modal)
+		{
+			for(let i=0; i<el.length; i++)
+			{
+				el[i].addEventListener('click',()=>{
+					for(let j=0; j<modal.length; j++)
+					{
+						modal[j].style.display = 'none';
+						modal[j].classList.remove('display_flex');
+					}
+					cover[0].style.display = 'none';
+				})
+			}
+		}
+		close(closeIcons,modals);
+		close(cover,modals);
+
+}
+closeModal();
+
+let add  = document.querySelector('.add');
+let addModal = document.querySelector('.add__friend');
+if(add!=null)
+{
+	add.addEventListener('click',()=>{
+		addModal.classList.add('display_flex');
+		cover.style.display = 'block';
+	})
+}
 
 })
-
-
 
 
 
