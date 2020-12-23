@@ -163,8 +163,9 @@ nav
 .active i {
     transform: rotate(-180deg);
 }
-.active .hide__link{
-    top: 28px;
+.active .hide__link
+{
+    top:28px;
     opacity: 1;
     visibility: visible;
 }
@@ -473,7 +474,7 @@ nav a:hover,
 }
 .hide__link{
     position: absolute;
-    top: 0px;
+    top:0;
     left: 0;
     width: 150px;
     /*display: none;*/

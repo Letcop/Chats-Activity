@@ -260,7 +260,7 @@
       color: #00CF4D;
   }
   .activeProfile .head__hide{
-      top: 104px;
+      top: 102px;
       opacity: 1;
       visibility: visible;
   }
@@ -913,7 +913,7 @@
       }
       .media__active_hide + .media__hide_links{
           padding: 23px 13px 16px 19px;
-          height: 205px;
+          height: 220px;
           opacity: 1;
           visibility: visible;
       }
@@ -986,8 +986,8 @@
           position: relative;
       }
       .head__main_block{
-          padding: 15px 0;
-          justify-content: flex-start;
+          padding: 15px 15px;
+          justify-content: space-between;
       }
       .hide__modal_triangle{
           display: none;
@@ -1119,7 +1119,7 @@
           margin-right: 50px;
       }
       .media__logo{
-          margin-right: auto;
+          margin-right: 35px;
       }
       .singIn{
           justify-content: flex-start;

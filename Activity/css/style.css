@@ -606,7 +606,7 @@ input:checked+.slider:before {
     background: none;
     border: none;
     outline: none;
-    max-width: 95px;
+    width: 120px;
     color: #43426D;
     font-weight: 600;
     overflow: visible;
@@ -616,7 +616,7 @@ input:checked+.slider:before {
     background-image: url(../img/calendar.svg);
     background-size: 80%;
     position: absolute;
-    right: -25px;
+    right: 0;
 }
 
 .sort__by .sort__select, .sort__by .sort__select:focus {
@@ -626,7 +626,10 @@ input:checked+.slider:before {
     outline: none;
     color: #43426D;
 }
-
+.sort__by option{
+    background-color: #00cf4d;
+    color: #fff;
+}
 .active__item {
     width: 100%;
     height: fit-content;
@@ -869,14 +872,9 @@ input:checked+.slider:before {
 
 
 @media screen and (max-width: 1024px) {
-    ::-webkit-calendar-picker-indicator {
-        right: -20px;
-    }
+    
     .sort__select, .name, .notification__title, .notification__time, .notification__solution{
         font-size: 14px;
-    }
-    ::-webkit-calendar-picker-indicator {
-        right: -25px;
     }
     .nick, .notification__subtitle{
         font-size: 12px;
@@ -927,8 +925,10 @@ input:checked+.slider:before {
     .sort, .sort__select{
         font-size: 12px;
     }
+    #sort_date, #sort_date:focus{
+        width: 95px;
+    }
     ::-webkit-calendar-picker-indicator {
-        right: -15px;
         width: 16px;
     }
     .active__item{
@@ -1000,9 +1000,12 @@ input:checked+.slider:before {
         line-height: normal;
         text-align: center;
     }
-    #sort_date{
-        overflow:visible;
+    #sort_date, #sort_date:focus{
         margin-right: 8px;
+        width: 80px;
+    }
+    ::-webkit-calendar-picker-indicator {
+        width: 10px;
     }
     .sort__title{
         display: none;
@@ -1010,10 +1013,6 @@ input:checked+.slider:before {
     .sort__select{
         font-size: 8px;
         text-align: center;
-    }
-    ::-webkit-calendar-picker-indicator {
-        right: -15px;
-        width: 11px;
     }
     .companion{
         height: fit-content;
@@ -1056,9 +1055,6 @@ input:checked+.slider:before {
     }
     .guests{
         font-size: 14px;
-    }
-    #sort_date{
-        max-width: 72px;
     }
     .title{
         margin: 0 !important;

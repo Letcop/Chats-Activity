@@ -677,19 +677,20 @@ textarea.addEventListener('keyup', function(){
 	let message = document.createElement('div');
 	message.classList.add('file__block');
 	message.innerHTML = `									<div class="file__container">
-								<div class="file-img-container">
-									<div class="file-img">
-										<i class="fas fa-file"></i>
-									</div>								
-								</div>
-								<div class="file-discription">
-								<a class="file-name" href="${fileWay}">${name}</a>
-									<div class="props">
-										<span class="file__size">${size}</span>
-										<span class="file-type">${type}</span>									
-									</div>
-								</div>
-							</div>						`
+                        <div class="file__container">
+                            <div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:19</span></div>
+                            <div class="file-img-container">
+                                <div class="file-img">
+                                    <i class="fas fa-file"></i>
+                                </div>                              
+                            </div>
+                            <div class="file-discription">
+                                <a class="file-name" href="${fileWay}"><span class='file-name-text'>${name}</span><span>...</span><span class='extention'>${type}</span></a>
+                                <div class="props">
+                                    <span class="file__size">${size}</span>                                  
+                                </div>
+                            </div>
+                        </div>  					`
 
 							return message;
 	}
@@ -787,9 +788,3 @@ if(add!=null)
 }
 
 })
-
-
-
-
-
-	
