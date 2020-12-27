@@ -12,128 +12,47 @@
 <body class='work__chats'>
 
 
-
+<div class="cover"></div>
 <!-- modal__forbiden -->
-<div class="modal forbidenWords">
-	<div class="modal__header">
-		<div class="modal__header__title">
-			 Окно подтверждения
-		</div>
-		<i class="fas fa-times-circle closeIcon closeConfirmationPopup" ></i>
-	</div>
-	<div class="confirmationText">
-		В целях сохранения имиджа  а также блабалабалбалабалбалабалбалабалб мы не можем позвлить вам отправить это сообщение
-	</div>
-	<div class="confirmation__btn__container">
-		<div class="btn confirmationBtnYes">
-			понял
-		</div>
-		<div class=" btn confirmationBtnNO">
-			связаться с администрацией 
-		</div>
-		
-	</div>
-</div>
-<!-- modal__forbiden -->
-<!-- Modal__write to friends -->
-	<div class="cover"></div>
-	<div class="add__friend modal">
-		<div class="modal__header">
+	<div class="modal forbidenWords">
+		<div class="modal-header">
 			<div class="modal__header__title">
-				 Мои друзья
+				 Окно подтверждения
 			</div>
-			<i class="fas fa-times-circle closeIcon closeFriendPopup"></i>
+			<i class="fas fa-times-circle closeIcon closeConfirmationPopup" ></i>
 		</div>
-		<div class="friends__container">
-			<div class="friend">
-				<div class="friend__img">
-					<img src="img/avatar.png" alt="">
-				</div>
-				<div class="friend__info">
-					<div class="friend__name">
-						Георгий Петров
-					</div>
-					<div class="friend__nick">
-						  masteryoda128
-					</div>
-				</div>
-				<div class="plusBtn">
-					<img width="20" height='20' src="img/Plus.svg" alt="">
-				</div>
+		<div class="modal-body">
+				В целях сохранения вашей безопасности мы не можем позвлить вам отправить это сообщение
+		</div>
+		<div class="modal-btn-panel">
+			<div class="btn confirmationBtnYes">
+				понял
 			</div>
-			<div class="friend">
-				<div class="friend__img">
-					<img src="img/avatar.png" alt="">
-				</div>
-				<div class="friend__info">
-					<div class="friend__name">
-						Георгий Петров
-					</div>
-					<div class="friend__nick">
-						  masteryoda128
-					</div>
-				</div>
-				<div class="plusBtn">
-					<img width="20" height='20' src="img/Plus.svg" alt="">
-				</div>
+			<div class=" btn confirmationBtnNO  red--btn">
+				связаться с администрацией 
 			</div>
-			<div class="friend">
-				<div class="friend__img">
-					<img src="img/avatar.png" alt="">
-				</div>
-				<div class="friend__info">
-					<div class="friend__name">
-						Георгий Петров
-					</div>
-					<div class="friend__nick">
-						  masteryoda128
-					</div>
-				</div>
-				<div class="plusBtn">
-					<img width="20" height='20' src="img/Plus.svg" alt="">
-				</div>
-			</div>
-			<div class="friend">
-				<div class="friend__img">
-					<img src="img/avatar.png" alt="">
-				</div>
-				<div class="friend__info">
-					<div class="friend__name">
-						Георгий Петров
-					</div>
-					<div class="friend__nick">
-						  masteryoda128
-					</div>
-				</div>
-				<div class="plusBtn">
-					<img width="20" height='20' src="img/Plus.svg" alt="">
-				</div>
-			</div>
+			
 		</div>
 	</div>
-<!-- Modal__write to friends -->
+<!-- modal__forbiden -->
 
-<div class="confirmation__panel">
-	<a class='btn confirmBtn'>Подтвердить работу исполнителя</a>
-	<a href="##" class='btn rejectBtn'>не выполнена</a>
-</div>
 
 <!-- modal__confirmation -->
-<div class="modal confirmation__popup">
-	<div class="modal__header">
+<div class="modal transaction-confirm">
+	<div class="modal-header">
 		<div class="modal__header__title">
 			 Окно подтверждения
 		</div>
 		<i class="fas fa-times-circle closeIcon closeConfirmationPopup" ></i>
 	</div>
-	<div class="confirmationText">
+	<div class="modal-body">
 		Потверждаете ли вы перечисление средств на счет исполнителя?
 	</div>
-	<div class="confirmation__btn__container">
-		<div class="btn confirmationBtnYes">
+	<div class="modal-btn-panel">
+		<div class="btn confirmBtn" >
 			Да
 		</div>
-		<div class=" btn confirmationBtnNO">
+		<div class=" btn red--btn rejectBtn" >
 			 Нет
 		</div>
 		
@@ -156,25 +75,26 @@
 						<a href="#/">Заказы</a>
 						<a href="#/">Вакансии</a>
 
-            <div class="header__dropDowns">
-                <span>Люди</span>
-                <i class="fal fa-chevron-down"></i> 
-                <div class="hide__link">
-                    <a href="#/">Все команды</a>
-                    <a href="#/">Все исполнители</a>
-                </div>
-            </div>
+						<div class="head__bottom clickedElem">
+							<span>Люди</span>
+							<i class="fal fa-chevron-down"></i>
 
-            <div class="header__dropDowns">
-                <span>Еще</span>
-                <i class="fal fa-chevron-down"></i>
+							<div class="hide__link">
+								<a href="#/">Все команды</a>
+								<a href="#/">Все исполнители</a>
+							</div>
+						</div>
 
-                <div class="hide__link">
-                    <a href="#/">Форум</a>
-                    <a href="#/">Блог</a>
-                    <a href="#/">Новости</a>
-                </div>
-            </div>
+						<div class="head__bottom clickedElem">
+							<span>Еще</span>
+							<i class="fal fa-chevron-down"></i>
+
+							<div class="hide__link">
+								<a href="#/">Форум</a>
+								<a href="#/">Блог</a>
+								<a href="#/">Новости</a>
+							</div>
+						</div>
 					</nav>
 				</div>
 				<div class="head__botton">
@@ -592,7 +512,7 @@
 <!-- subheader--mob -->
 	<div class="subheader__container companionsList__subheader">
 		<div class="subheader__mob">
-			<i class="fas fa-chevron-left"></i>
+			<i class="fas fa-chevron-left leftChevron"></i>
 			<div class="subheder__title">Переписки</div>
 		</div>
 	</div>
@@ -604,7 +524,7 @@
 <!-- subheader--mob -->
 	<div class="subheader__container messenger__subheader">
 		<div class="subheader__mob">
-			<i class="fas fa-chevron-left"></i>
+			<i class="fas fa-chevron-left leftChevron"></i>
 			<div class="subheder__title">Гергий Петров</div>
 			<div class="subheader__subtitle">последний визит 22 апреля 2020</div>
 		</div>
@@ -629,8 +549,8 @@
 	<section class="tabs">
 		<div class="conteiner">
 			<div class="tabs__container">
-				<div class="tabs__item  active__tab" id="customers-js"><span class='tab__title'>Заказчики</span><span class = 'messages__quantity'>(33)</span></div>
-				<div class="tabs__item" id="contractors-js"><span class='tab__title'>Исполнители</span> <span class = 'messages__quantity'>(5)</span></div>
+				<div class="tabs__item  active__tab customers-js"><span class='tab__title'>Заказчики</span><span class = 'messages__quantity'>(33)</span></div>
+				<div class="tabs__item contractors-js"><span class='tab__title'>Исполнители</span> <span class = 'messages__quantity'>(5)</span></div>
 			</div>
 			<div class="user__status__bar">
 				<div class='user__name'>Георгий Петров</div>
@@ -642,6 +562,11 @@
 		</div>
 	</section>
 <!-- Tabs -->
+
+
+
+
+
 
 
 
@@ -736,6 +661,9 @@
 		</a>
 	</div>
 <!-- Catefories__panel -->
+
+
+
 	<!-- messenger customer__chats_tab -->
 		<section class="chats customer__chats_tab active__chat">
 			<div class="conteiner">
@@ -919,31 +847,30 @@
 				</div>
 				<div class="message__place">
 					
-					<div class="contract__status_bar customer__side" >
-						<div class="dedline">
-							<span class="contract__status_bar__text dedline__text">Дедлайн до:</span>
-							<div class="dedline__input"><span class="contract__status_bar__text" id='date'>22.04.2020</span><i class="fas fa-calendar-alt contract__status_bar__text"></i></div>
+					<div class="contract_bar customer__side grey--color" >
+						<div class="dedline contract__status_bar__text">
+							<span>
+								<span class='dedlayn'>Дедлайн</span>
+								<span>до:</span>
+							</span>
+							<span id='date'>22.04.2020</span><i class="fas fa-calendar-alt"></i>
 						</div>
-						<div class="price">
-							<span class="contract__status_bar__text">Цена: </span>
-							<div class="price__input"><span class="contract__status_bar__text">200</span><img src="img/dollar.svg" class='dollar-icon' alt=""></div>
+						<div class="price contract__status_bar__text">
+							<span>Цена: </span>
+							<span id="price__text">200</span>
+							<i class="fas fa-dollar-sign"></i>
 						</div>
-						<div class="payment__subiting">
-							<span class='payment__status contract__status_bar__text dnone'>Платеж: </span>
-							<span style='margin-left: 5px;' class="payment__status__value contract__status_bar__text pay__status" >Ожидается</span>
-							<a href="##" class='btn getPayment'>Принять платеж</a>
-						
+						<div class="payment__subiting contract__status_bar__text">
+							<span class='payment__status'>Платеж:</span>
+							<span class="payment__status__value" >Ожидается</span>	
 						</div>
 					</div>	
-					<div class="messages__block">
+					<div class="messages__block customers__chat__block">
 						<div class="recieved__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
 							<div class='recieved__messages__text'>
 								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
 							</div> 
-						</div>
-						<div class="send_for_check">
-							<a href="##" class="btn sendForCheck">Отправить работу</a>
 						</div>
 						<div class="sended__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
@@ -1010,6 +937,18 @@
 									<i class="fas fa-check down"></i>
 								</div> 
 							</div>
+						</div>
+						<div class="sended__messages message">
+							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
+							<div class="sended__messages__text">
+								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
+							</div>
+							<div class="double__symbol">
+								<div class="checked__symbol">
+									<i class="fas fa-check up"></i>
+									<i class="fas fa-check down"></i>
+								</div> 
+							</div>
 						</div>												
 					</div>
 					
@@ -1021,9 +960,9 @@
 							<div class="emojis"><i class="fas fa-smile"></i></div>
 							<div  class="input__area">
 								<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
-								<input style='display:none;'  type="file" name="" id ="input__file">
-								<label for="input__file"><i class="fas fa-file-alt"></i></label>
-								<a class="btn sendMessageBtn grey__color" >отправить</a>
+								<input style='display:none;'  type="file" name="" class="customersFileInput" id ="customerDesktopFileInput">
+								<label for="customerDesktopFileInput"><i class="fas fa-file-alt"></i></label>
+								<a class="btn sendMessageBtn grey__color">отправить</a>
 							</div>
 						</div>
 						<div class="mob__msg">
@@ -1031,8 +970,8 @@
 							<div class='msg__input__container'>
 								<div class="emojis"><i class="fas fa-smile"></i></div>
 								<a class="btn sendMessageBtn grey__color">отправить</a>
-								<label for="input__file"><i class="fas fa-file-alt"></i></label>
-								<input style='display:none;'  type="file" name="" id ="input__file">
+								<input style='display:none;'  type="file" name="" class="customersFileInput" id ="customerMobFileInput">
+								<label for="customerMobFileInput"><i class="fas fa-file-alt"></i></label>
 							</div>
 						</div>
 					</div>
@@ -1225,14 +1164,14 @@
 				</div>
 				<div class="message__place">
 					
-					<div class="contract__status_bar">
+					<div class="contract_bar red--color contractor__side">
 						<div class="dedline">
-							<span class="contract__status_bar__text dedline__text">Дедлайн до:</span>
-							<div class="dedline__input"><input type="date" class="dedline" id='DateInput'></div>
+							<span class="contract__status_bar__text dedline__text"><span class='dedlayn'>Дедлайн</span> до:</span>
+							<input type="date" max='2030-01-01' min='2021-01-01' class="dedline__input">
 						</div>
 						<div class="price">
 							<span class="contract__status_bar__text price__text">Цена: </span>
-							<div class="price__input"><input type="number" id="inputPrice" maxlength="6" ><img src="img/dollar.svg" class='dollar-icon' alt=""></div>
+							<div class="price__input"><input type="number" id="inputPrice" maxlength="6"><i class="fas fa-dollar-sign"></i></div>
 						</div>
 						<div class="payment__subiting">
 							<span class='payment__status contract__status_bar__text dnone'>Платеж: </span>
@@ -1240,7 +1179,7 @@
 							<a href="##" class="btn pay__btn">Отправить платеж</a>
 						</div>
 					</div>
-					<div class="messages__block">
+					<div class="messages__block contractors__chat__block">	
 						<div class="recieved__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
 							<div class='recieved__messages__text'>
@@ -1314,9 +1253,8 @@
 							</div>
 						</div>												
 					</div>
-					
+				
 					<div class="activities__bar">
-						<a class="pay__btn btn">Отправить платеж</a>
 						<div class="div" style='position: relative; width: 0px;'>
 							<div class="typing__indicator">Пишет ... Hamilioner</div>
 						</div>
@@ -1324,18 +1262,18 @@
 							<div class="emojis"><i class="fas fa-smile"></i></div>
 							<div  class="input__area">
 								<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
-								<input style='display:none;'  type="file" name="" id ="input__file">
-								<label for="input__file"><i class="fas fa-file-alt"></i></label>
-								<a class="btn sendMessageBtn grey__color" >отправить</a>
+								<input style='display:none;'  type="file" name="" class='contractorFileInput' id ="contractorFileInputDesk">
+								<label for="contractorFileInputDesk"><i class="fas fa-file-alt"></i></label>
+								<a class="btn sendMessageBtn grey__color">отправить</a>
 							</div>
 						</div>
 						<div class="mob__msg">
 							<textarea type="text" class='input__message__text' placeholder="Написать сообщение"></textarea>
 							<div class='msg__input__container'>
 								<div class="emojis"><i class="fas fa-smile"></i></div>
-								<a class="btn sendMessageBtn grey__color" >отправить</a>
-								<label for="input__file"><i class="fas fa-file-alt"></i></label>
-								<input style='display:none;'  type="file" name="" id ="input__file">
+								<a class="btn sendMessageBtn grey__color">отправить</a>
+								<input style='display:none;'  type="file" name="" class='contractorFileInput' id ="contractorFileInputMob">
+								<label for="contractorFileInputMob"><i class="fas fa-file-alt"></i></label>
 							</div>
 						</div>
 					</div>
@@ -1353,7 +1291,6 @@
 
 
 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
 
 	<script type="text/javascript" src="js/base(footer, header).js"></script>
 	<script type="text/javascript" src="js/script.js"></script>

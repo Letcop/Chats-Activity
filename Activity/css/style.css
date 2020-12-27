@@ -1,26 +1,22 @@
 *{
     font-family: 'Monserrat';
-    text-decoration: none ;
-    box-sizing: border-box;
-}
-a, a:hover{
     text-decoration: none;
+    box-sizing: border-box;
 }
 body {
     background-color: #F8F8FA;
 }
-.categories__panel
-{
-    top:175px !important;
-}
-.forbidenWords{
+.forbidenWords
+    {
         height: 250px !important;
         width: 90vw;
     }
-    .forbidenWords .modal__header__title{
+    .forbidenWords .modal__header__title
+    {
         margin-top: 40px;
     }
-    .cover{
+    .cover 
+    {
         display: none;
         position:fixed;
         left:0;
@@ -30,7 +26,9 @@ body {
         z-index:999999;
         background-color: rgba(0,0,0,0.5);
     }
-    .confirmation__popup{
+
+    .confirmation__popup
+    {
 
         padding-top: 20px;
     }
@@ -44,21 +42,24 @@ body {
         text-align: center;
         font-weight: 800;
     }
-    .confirmation__btn__container{
+    .confirmation__btn__container 
+    {
         display: flex;
         text-align: center;
         margin-top: 40px;
         justify-content: space-around;
 
     }
-    .confirmationBtnYes{
+    .confirmationBtnYes 
+    {
         width: 40%;
         display: flex;
         align-items: center;
         justify-content: center;
         border-top:1px solid #00cf4d;
     }
-    .confirmationBtnNO{
+    .confirmationBtnNO 
+    {
         width: 40%;
         display: flex;
         align-items: center;
@@ -66,7 +67,8 @@ body {
         background-color:  #ff8fb4;
         border: none;
     }
-    .confirmation__btn__container .btn{
+    .confirmation__btn__container .btn
+    {
         margin-left: 0;
     }
 
@@ -78,12 +80,14 @@ body {
 
 
 
-    .add__friend{
+    .add__friend 
+    {
         display: flex;
         flex-direction: column;
         min-width: 639px;
     }
-    .modal{
+    .modal 
+    {
         display: none;
         position:fixed;
         z-index: 9999999;
@@ -98,12 +102,14 @@ body {
         color: #253556;
     
     }
-    .confirmation__popup{
+    .confirmation__popup 
+    {
         width: 50vw;
         height: 200px;
     }
 
-    .modal__header{
+    .modal__header
+    {
         display: flex;
         position:relative;
         height: 15%;
@@ -113,7 +119,8 @@ body {
         font-size: 30px;
         font-weight: 600;
     }
-    .modal__header .closeIcon{  
+    .modal__header .closeIcon 
+    {  
         position:absolute;
         right: 15px;
         top: 10px;
@@ -122,24 +129,29 @@ body {
         font-weight: 900;
 
     }
-    .friends__container{
+    .modal__header__title {}
+    .friends__container 
+    {
         width: 100%;
         display:flex;
         margin-top: 30px;
         padding: 0 10px;
         flex-wrap:wrap; 
     }
-    .friend{
+    .friend 
+    {
         display: flex;
         width: 50%;
         cursor: pointer;
         margin: 5px 0;
     }
-    .friend__img{
+    .friend__img 
+    {
         width: 70px;
         height: 100%;
     }
-    .friend__img img{
+    .friend__img img
+    {
         border-radius: 50%;
     }
     .friend__info {
@@ -225,15 +237,13 @@ body
     .activeDropdown
     {
         transition:  all 0.3s linear;
-        height:  80px;
-        padding-bottom: 5px;
+        height:  78px;
     }
     .mob__category .fa-chevron-down
     {
         position: absolute;
-        right: 10px;
-        top: 0px;
-        font-size: 16px;
+        right: 20px;
+        top: 4px;
     }
     .hiden__list
     {
@@ -249,6 +259,7 @@ body
     {
         margin-bottom: 5px;
     }
+    .mob__active__category {}
 /**********Mob categories********/
 
 
@@ -256,7 +267,7 @@ body
     .categories__panel 
     {
         position: absolute;
-        top: 175px;
+        top: 10px;
         left: 10px;
         display: flex;
         flex-direction: column;
@@ -366,14 +377,14 @@ body
     }
 /***********Subheader mob***********/
 .conteiner{
-    min-width: 0;
+    width: 100vw;
     max-width: 1170px;
     margin: auto;
 }
 .categories__panel 
 {
     position: absolute;
-    top: 175px;
+    top: 10px;
     left: 10px;
     display: flex;
     flex-direction: column;
@@ -554,6 +565,10 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
+.name {
+    font-size: 18px;
+    width: 55px;
+}
 
 /*********Tabs*************/
 
@@ -570,6 +585,7 @@ input:checked+.slider:before {
     opacity: 0;
     transition: all 0.3s linear;
 }
+
 .display__block {
     display: block !important;
 }
@@ -606,7 +622,7 @@ input:checked+.slider:before {
     background: none;
     border: none;
     outline: none;
-    width: 120px;
+    max-width: 95px;
     color: #43426D;
     font-weight: 600;
     overflow: visible;
@@ -616,7 +632,7 @@ input:checked+.slider:before {
     background-image: url(../img/calendar.svg);
     background-size: 80%;
     position: absolute;
-    right: 0;
+    right: -25px;
 }
 
 .sort__by .sort__select, .sort__by .sort__select:focus {
@@ -626,10 +642,7 @@ input:checked+.slider:before {
     outline: none;
     color: #43426D;
 }
-.sort__by option{
-    background-color: #00cf4d;
-    color: #fff;
-}
+
 .active__item {
     width: 100%;
     height: fit-content;
@@ -707,16 +720,14 @@ input:checked+.slider:before {
 .name {
     cursor: pointer;
     font-size: 16px;
-    width: 150px;
+    width: 120px;
 }
+
 .nick {
     margin: 5px 0;
     font-size: 12px;
 }
-.nick:hover{
-    color: #00cf4d;
-    text-decoration: underline;
-}
+
 .wall {
     width: 5px;
     height: 90%;
@@ -824,57 +835,15 @@ input:checked+.slider:before {
     font-weight: 400;
 }
 
-
-@media(max-width:1325px)
-{
-    .activity .conteiner
-    {
-        margin-left: 80px;
-    }
-    .tabs .conteiner
-
-    {
-        margin-left: 80px;
-    }
-    .conteiner
-    {
-        width: auto !important;
-    }
-    .chats .conteiner
-    {
-        margin-left: 80px;
-    }
-    .tabs .conteiner
-    {
-        margin-left: 80px;
-    }
-    header .conteiner
-    {  
-        margin-left: 80px;
-
-    }
-    .head__right
-    {
-        width: 340px;
-    }
-}
-@media(max-width: 1040px)
-{
-    header .conteiner
-    {
-        margin-left: auto;
-    }
-/*    .head__right
-    {
-        width: 430px;
-    }*/
-}
-
-
 @media screen and (max-width: 1024px) {
-    
+    ::-webkit-calendar-picker-indicator {
+        right: -20px;
+    }
     .sort__select, .name, .notification__title, .notification__time, .notification__solution{
         font-size: 14px;
+    }
+    ::-webkit-calendar-picker-indicator {
+        right: -25px;
     }
     .nick, .notification__subtitle{
         font-size: 12px;
@@ -890,29 +859,7 @@ input:checked+.slider:before {
     }
 }
 
-@media(max-width: 850px)
-{
-    .tabs__item
-    {
-        width: 210px;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .categories__panel
-    {
-        display: none;
-    }
-    .mobile__categories {
-        display: block;
-    }
-    .tabs .conteiner
-    {
-        margin-left: auto !important;
-    }
-    .activity .conteiner{
-        margin-left: auto;
-    }
     .tabs__item {
         width: 170px;
     }
@@ -925,10 +872,8 @@ input:checked+.slider:before {
     .sort, .sort__select{
         font-size: 12px;
     }
-    #sort_date, #sort_date:focus{
-        width: 95px;
-    }
     ::-webkit-calendar-picker-indicator {
+        right: -15px;
         width: 16px;
     }
     .active__item{
@@ -961,15 +906,9 @@ input:checked+.slider:before {
         padding: 0 2px;
     }
     .tabs__item{
-        font-size: 12px;
+        font-size: 10px;
         height: 30px;
-        width: 120px;
-    }
-    .active__tab {
-        height: 40px;
-        background-color: #00cf4d;
-        transition: all 0.3s linear;
-        color: white;
+        width: 90px;
     }
     .push-section {
         width: fit-content;
@@ -1000,12 +939,9 @@ input:checked+.slider:before {
         line-height: normal;
         text-align: center;
     }
-    #sort_date, #sort_date:focus{
+    #sort_date{
+        overflow:visible;
         margin-right: 8px;
-        width: 80px;
-    }
-    ::-webkit-calendar-picker-indicator {
-        width: 10px;
     }
     .sort__title{
         display: none;
@@ -1013,6 +949,10 @@ input:checked+.slider:before {
     .sort__select{
         font-size: 8px;
         text-align: center;
+    }
+    ::-webkit-calendar-picker-indicator {
+        right: -15px;
+        width: 11px;
     }
     .companion{
         height: fit-content;
@@ -1055,6 +995,9 @@ input:checked+.slider:before {
     }
     .guests{
         font-size: 14px;
+    }
+    #sort_date{
+        max-width: 72px;
     }
     .title{
         margin: 0 !important;
