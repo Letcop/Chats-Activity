@@ -6,7 +6,10 @@ window.addEventListener('load',()=>{
 			btnYes: document.querySelector('.confirmationBtnYes'),
 			btnNo: document.querySelector('.confirmationBtnNo')
 		}		
-let filterW = function(el)
+
+
+		let sendProjectContainer = `<div class="sendProjectConteiner"><a class='btn sendProject'>Отправить Работу Для Предварительного Просмотра</a></div>`;
+let filter = function(el)
 {
 	let isThereForbidenWord = false;
 	let text = el.value.split(" ");
@@ -505,6 +508,11 @@ animatioForTypingIndicator(typing,"Timur");
 	})	
 	}
 
+	if(payConfirmation==true)
+	{
+		documnet.querySelector('.customer__chats_tab').querySelector('.messagepblock').appendChild(sendProjectContainer);
+	}
+
 
 
 
@@ -676,7 +684,7 @@ textarea.addEventListener('keyup', function(){
 	function file(name,size,type,fileWay){
 	let message = document.createElement('div');
 	message.classList.add('file__block');
-	message.innerHTML = `									<div class="file__container">
+	message.innerHTML = `
                         <div class="file__container">
                             <div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:19</span></div>
                             <div class="file-img-container">
@@ -786,5 +794,84 @@ if(add!=null)
 		cover.style.display = 'block';
 	})
 }
+
+
+
+
+
+let header__dropDowns = document.querySelectorAll(".header__dropDowns");
+let active ='active__header__dropdown';
+
+function widthAnim(el,width)
+{
+	let temp = el.offsetWidth;
+	let timer = setInterval(()=>{
+		temp+=10;
+		el.style.width = temp+'px';
+		console.log(el.offsetWidth);
+		if(temp>=width)
+		{
+			clearInterval(timer);
+		}
+	},1)
+
+}
+
+function widthAnim1(el,width)
+{
+	let temp = el.offsetWidth;
+	let timer = setInterval(()=>{
+		temp-=10;
+		el.style.width = temp+'px';
+		console.log(el.offsetWidth);
+		if(temp<=width)
+		{
+			clearInterval(timer);
+		}
+	},1)
+
+}
+
+function dropDown(el,active)
+{
+	for(let i=1; i<el.length; i++)
+	{
+		el[i].addEventListener('click',()=>{
+			for(let j=0; j<el.length; j++)
+			{
+				if(i==j)
+				{
+
+				}
+				else{
+					el[j].classList.remove(active);
+				}
+			}
+			if(el[i].classList.contains(active))
+			{
+				el[i].classList.remove(active);
+				if(i==0)
+				{
+					widthAnim1(el[0],68);
+					el[1].style.display = 'flex';	
+				}
+			}
+			else
+			{
+				el[i].classList.add(active);
+				if(i==0)
+				{
+					widthAnim(el[i],180);
+					el[1].style.display = 'none';
+				}
+			}
+			
+		})
+	}
+}
+
+dropDown(header__dropDowns,active);
+
+
 
 })

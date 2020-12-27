@@ -11,6 +11,8 @@
 </head>
 <body class='work__chats'>
 
+
+
 <!-- modal__forbiden -->
 <div class="modal forbidenWords">
 	<div class="modal__header">
@@ -154,26 +156,25 @@
 						<a href="#/">Заказы</a>
 						<a href="#/">Вакансии</a>
 
-						<div class="head__bottom clickedElem">
-							<span>Люди</span>
-							<i class="fal fa-chevron-down"></i>
+            <div class="header__dropDowns">
+                <span>Люди</span>
+                <i class="fal fa-chevron-down"></i> 
+                <div class="hide__link">
+                    <a href="#/">Все команды</a>
+                    <a href="#/">Все исполнители</a>
+                </div>
+            </div>
 
-							<div class="hide__link">
-								<a href="#/">Все команды</a>
-								<a href="#/">Все исполнители</a>
-							</div>
-						</div>
+            <div class="header__dropDowns">
+                <span>Еще</span>
+                <i class="fal fa-chevron-down"></i>
 
-						<div class="head__bottom clickedElem">
-							<span>Еще</span>
-							<i class="fal fa-chevron-down"></i>
-
-							<div class="hide__link">
-								<a href="#/">Форум</a>
-								<a href="#/">Блог</a>
-								<a href="#/">Новости</a>
-							</div>
-						</div>
+                <div class="hide__link">
+                    <a href="#/">Форум</a>
+                    <a href="#/">Блог</a>
+                    <a href="#/">Новости</a>
+                </div>
+            </div>
 					</nav>
 				</div>
 				<div class="head__botton">
@@ -628,8 +629,8 @@
 	<section class="tabs">
 		<div class="conteiner">
 			<div class="tabs__container">
-				<div class="tabs__item  active__tab"><span class='tab__title'>Заказчики</span><span class = 'messages__quantity'>(33)</span></div>
-				<div class="tabs__item"><span class='tab__title'>Исполнители</span> <span class = 'messages__quantity'>(5)</span></div>
+				<div class="tabs__item  active__tab" id="customers-js"><span class='tab__title'>Заказчики</span><span class = 'messages__quantity'>(33)</span></div>
+				<div class="tabs__item" id="contractors-js"><span class='tab__title'>Исполнители</span> <span class = 'messages__quantity'>(5)</span></div>
 			</div>
 			<div class="user__status__bar">
 				<div class='user__name'>Георгий Петров</div>
@@ -941,6 +942,9 @@
 								После этого обновления перестал работать модуль Яндекс.Кассы для приема платежей в магазине.
 							</div> 
 						</div>
+						<div class="send_for_check">
+							<a href="##" class="btn sendForCheck">Отправить работу</a>
+						</div>
 						<div class="sended__messages message">
 							<div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">18:37</span></div>
 							<div class="sended__messages__text">
@@ -1010,8 +1014,6 @@
 					</div>
 					
 					<div class="activities__bar">
-
-						<a class='btn sendProject'>Отправить Работу Для Предварительного Просмотра</a>
 						<div class="div" style='position: relative; width: 0px;'>
 							<div class="typing__indicator">Пишет ... Hamilioner</div>
 						</div>

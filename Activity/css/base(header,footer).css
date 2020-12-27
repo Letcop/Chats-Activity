@@ -803,6 +803,9 @@
       .media__active_hide a{
           color: #fff !important
       }
+      .media__active_hide .icon::before{
+          color: #fff !important;
+      }
       .media__active_hide i:last-child{
           transform: translateY(-50%) rotate(-180deg);
       }
@@ -894,6 +897,8 @@
           margin-left: 12px;
           margin-right: 0;
           font-weight: 400;
+          font-size: 16px;
+          color: #6461ff;
       }
       .media__hide_links{
           height: 0;
