@@ -38,6 +38,21 @@ for(let i=0; i<categories.length; i++)
 			mobCategories.classList.add('activeDropdown');
 		}
 })
+
+		function triggering(el,className)
+	{
+		el.addEventListener('click',()=>{
+			if(el.classList.contains(className))
+			{
+				el.classList.remove(className);
+			}
+			else
+			{
+				el.classList.add(className);
+			}
+		})
+	}
+	triggering(document.querySelector('.yesho'),'active__yesho')
 })
 
 

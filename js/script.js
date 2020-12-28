@@ -106,7 +106,7 @@ window.addEventListener('load',()=>{
 				external.categoriesPanel.style.display ='none';
 				internal.subheader.style.display = 'flex';
 				messagePlace.style.display = 'block';
-				document.querySelector('body').style.overflowX = 'hidden';
+				document.querySelector('body').style.overflow = 'hidden';
 			})
 		}
 		internal.subheader.addEventListener('click',()=>{
@@ -116,7 +116,7 @@ window.addEventListener('load',()=>{
 				external.categoriesPanel.style.display ='block';
 				internal.subheader.style.display = 'none';
 				messagePlace.style.display = 'none';
-				document.querySelector('body').style.overflowX = 'scroll';
+				document.querySelector('body').style.overflow = 'scroll';
 		})
 	}
 
@@ -168,8 +168,6 @@ window.addEventListener('load',()=>{
 				disactiveForObjects(chats,activeChat,tab)
 				if(tabs[tab].classList.contains(activeTab) && chats[tab].classList.contains(activeChat))
 				{
-					tabs[tab].classList.remove(activeTab);
-					chats[tab].classList.remove(activeChat);	
 				}
 				else
 				{
@@ -369,13 +367,19 @@ window.addEventListener('load',()=>{
 		messageTemp.innerHTML = `
 	                        <div class="file__container">
 	                            <div class="acted__time"><i class="fas fa-clock"></i> <span class="textTime">${date.getHours()}:${date.getMinutes()}</span></div>
+	                            <div class="double__symbol">
+																<div class="checked__symbol">
+																	<i class="fas fa-check up"></i>
+																	<i class="fas fa-check down"></i>
+																</div> 
+															</div>
 	                            <div class="file-img-container">
 	                                <div class="file-img">
 	                                    <i class="fas fa-file"></i>
 	                                </div>                              
 	                            </div>
 	                            <div class="file-discription">
-	                                <a class="file-name" href="${fileWay}"><span class='file-name-text'>${name}</span><span>...</span><span class='extention'>${type}</span></a>
+	                                <a class="file-name" href="${fileWay}"><span class='file-name-text'>${name}</span><span style='margin-left: 3px'>...</span><span class='extention'>${type}</span></a>
 	                                <div class="props">
 	                                    <span class="file__size">${size}</span>                                  
 	                                </div>
@@ -606,7 +610,9 @@ window.addEventListener('load',()=>{
 					workChats.customer.querySelector('#price__text').innerText =  payment.price.input.value;
 					document.querySelector('.payment__status__value').innerText = 'Зарезервирован';
 					document.querySelector('.pay__status').innerText =  'Зарезервирован';
-				}	
+					payment.price.input.setAttribute('disabled','disabled');
+					payment.dedline.input.setAttribute('disabled','disabled');
+				}
 			})			
 		}
 	}
@@ -621,7 +627,7 @@ window.addEventListener('load',()=>{
 		let btn = document.querySelector('.sendForCheck');
 		let request = 0;
 		btn.addEventListener('click',()=>{
-
+			btn.style.display = 'none';
 			block.appendChild(showCheckResult);
 			keyModalShow(document.querySelector('.done'),document.querySelector('.transaction-confirm'));
 		})
@@ -653,23 +659,89 @@ window.addEventListener('load',()=>{
 			})
 		}		
 	}
+	function userTyping(el,name,typing)
+	{
+		let dots = "";
+		let i = 0;
+		if(typing)
+		{
+			let timer = setInterval(()=>{
+				dots +='.';
+				el.innerText = `Пишет ${name}`+dots;
+				i++;
+				if(i==3)
+				{
+					i=0;
+					dots="";
+				}
+			},300)
+		}
+	}
 
+	function checkScreen(elements)
+	{
+		let element;
+		if(window.screen.width<=820)
+		{
+			element =  elements[1]; 
+		}
+		else
+		{
+			element = elements[0]
+		}
+		return element;
+	}
 
+	function showBtnMob()
+	{
+		payment.dedline.input.addEventListener('change',()=>{
+			if(checkInputs(payment))
+			{
+				document.querySelector('.mobPayBtn').style.display = 'flex';
+			}
+			else
+			{
+				document.querySelector('.mobPayBtn').style.display = 'none';
+			}
 
+		})
+		payment.price.input.addEventListener('change',()=>
+		{
+			if(checkInputs(payment))
+			{
+				document.querySelector('.mobPayBtn').style.display = 'flex';
+			}
+			else
+			{
+				document.querySelector('.mobPayBtn').style.display = 'none';
+			}
+		})
+
+	}
+	function triggering(el,className)
+	{
+		el.addEventListener('click',()=>{
+			if(el.classList.contains(className))
+			{
+				el.classList.remove(className);
+			}
+			else
+			{
+				el.classList.add(className);
+			}
+		})
+	}
 
 
 	if(isCurrentChatsIsGeneral)
 	{
+		userTyping(document.querySelector('.typing__indicator'),'Тимур',true);
 		sendFiles(generalChats.all.querySelectorAll('.allChatsFileInput'),document.querySelector('.all__chats__block'));
 		sendFiles(generalChats.support.querySelectorAll('.supportChatsFileInput'),document.querySelector('.support__chats__block'));
 		defineUserSubheader(generalChats.all.querySelectorAll('.companion'),internalMobInterface.subheader);
 		defineUserSubheader(generalChats.support.querySelectorAll('.companion'),internalMobInterface.subheader);
 
-		sendMessage(generalChats.all.querySelector('.messages__block'),generalChats.all.querySelectorAll('.sendMessageBtn'),generalChats.all.querySelector('textarea'));
-		sendMessage(generalChats.all.querySelector('.messages__block'),generalChats.all.querySelectorAll('.sendMessageBtn'),generalChats.all.querySelectorAll('textarea')[1]);
-
-		sendMessage(generalChats.support.querySelector('.messages__block'),generalChats.support.querySelectorAll('.sendMessageBtn'),generalChats.support.querySelector('textarea'));
-		sendMessage(generalChats.support.querySelector('.messages__block'),generalChats.support.querySelectorAll('.sendMessageBtn'),generalChats.support.querySelectorAll('textarea')[1]);
+		sendMessage(generalChats.all.querySelector('.messages__block'),generalChats.all.querySelectorAll('.sendMessageBtn'),checkScreen(generalChats.all.querySelectorAll('textarea')));
 		swicthSendBtnColor();
 		checkingInput();
 		standartHideTriggers();
@@ -688,11 +760,8 @@ window.addEventListener('load',()=>{
 		checkingInput();
 		standartHideTriggers();
 		swicthSendBtnColor();
-		sendMessage(workChats.customer.querySelector('.messages__block'),workChats.customer.querySelectorAll('.sendMessageBtn'),workChats.customer.querySelector('textarea'));
-		sendMessage(workChats.customer.querySelector('.messages__block'),workChats.customer.querySelectorAll('.sendMessageBtn'),workChats.customer.querySelectorAll('textarea')[1]);
-		sendMessage(workChats.contractor.querySelector('.messages__block'),workChats.contractor.querySelectorAll('.sendMessageBtn'),workChats.contractor.querySelector('textarea'));
+		sendMessage(workChats.customer.querySelector('.messages__block'),workChats.customer.querySelectorAll('.sendMessageBtn'),checkScreen(workChats.customer.querySelector('textarea')));
 		
-		sendMessage(workChats.contractor.querySelector('.messages__block'),workChats.contractor.querySelectorAll('.sendMessageBtn'),workChats.contractor.querySelector('textarea')[1]);
 		
 		sendFiles(workChats.customer.querySelectorAll('.customersFileInput'),document.querySelector('.customers__chat__block'));
 		sendFiles(workChats.contractor.querySelectorAll('.contractorFileInput'),document.querySelector('.contractors__chat__block'));
@@ -701,10 +770,22 @@ window.addEventListener('load',()=>{
 	}
 
 
+	if(window.screen.width<820)
+	{
+		if(isCurrentChatsIsGeneral){
+
+		}
+		else
+		{
+			showBtnMob();
+		}
+	}
 	if(window.screen.width<768)
 	{
 	if(isCurrentChatsIsGeneral)
 	{
+
+
 		fromExternToIntern(generalChats.all.querySelector('.message__place'),externalMobInterface,internalMobInterface,generalChats.all.querySelectorAll('.companion'),generalChats.all.querySelector('.companions__list'));
 		fromExternToIntern(generalChats.support.querySelector('.message__place'),externalMobInterface,internalMobInterface,generalChats.support.querySelectorAll('.companion'),generalChats.support.querySelector('.companions__list'));
 	}
@@ -716,6 +797,7 @@ window.addEventListener('load',()=>{
 	}
 	subHeaderAnimation(document.querySelector('.mobile__categories'),'mobile__categories__active',document.querySelector('.categoryChevron'),'chevronAnimation');
 	}
+	triggering(document.querySelector('.yesho'),'active__yesho')
 
 
 
