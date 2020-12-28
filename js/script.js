@@ -760,7 +760,7 @@ window.addEventListener('load',()=>{
 		checkingInput();
 		standartHideTriggers();
 		swicthSendBtnColor();
-		sendMessage(workChats.customer.querySelector('.messages__block'),workChats.customer.querySelectorAll('.sendMessageBtn'),checkScreen(workChats.customer.querySelector('textarea')));
+		sendMessage(workChats.customer.querySelector('.messages__block'),workChats.customer.querySelectorAll('.sendMessageBtn'),checkScreen(workChats.customer.querySelectorAll('textarea')));
 		
 		
 		sendFiles(workChats.customer.querySelectorAll('.customersFileInput'),document.querySelector('.customers__chat__block'));
