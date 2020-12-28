@@ -742,6 +742,7 @@ window.addEventListener('load',()=>{
 		defineUserSubheader(generalChats.support.querySelectorAll('.companion'),internalMobInterface.subheader);
 
 		sendMessage(generalChats.all.querySelector('.messages__block'),generalChats.all.querySelectorAll('.sendMessageBtn'),checkScreen(generalChats.all.querySelectorAll('textarea')));
+		sendMessage(generalChats.support.querySelector('.messages__block'),generalChats.support.querySelectorAll('.sendMessageBtn'),checkScreen(generalChats.support.querySelectorAll('textarea')));
 		swicthSendBtnColor();
 		checkingInput();
 		standartHideTriggers();
@@ -761,6 +762,7 @@ window.addEventListener('load',()=>{
 		standartHideTriggers();
 		swicthSendBtnColor();
 		sendMessage(workChats.customer.querySelector('.messages__block'),workChats.customer.querySelectorAll('.sendMessageBtn'),checkScreen(workChats.customer.querySelectorAll('textarea')));
+		sendMessage(workChats.contractor.querySelector('.messages__block'),workChats.contractor.querySelectorAll('.sendMessageBtn'),checkScreen(workChats.contractor.querySelectorAll('textarea')));
 		
 		
 		sendFiles(workChats.customer.querySelectorAll('.customersFileInput'),document.querySelector('.customers__chat__block'));

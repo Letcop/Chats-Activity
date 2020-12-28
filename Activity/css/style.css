@@ -5,6 +5,27 @@
 }
 
 
+@media(min-width: 1356px)
+{
+    .categories__panel
+    {
+        left: calc((100vw - 1170px)/2 - 80px) !important;
+    }
+}
+
+
+.hoverFor
+{
+    cursor: pointer;
+    transition: .3s;
+
+}
+.hoverFor:hover
+{
+    color: #00cf4d;
+    transition: .3s;
+
+}
 .display__none
 {
     display: none !important;   
