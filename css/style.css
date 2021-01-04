@@ -228,6 +228,20 @@ a
 	margin: 0 auto;
 }
 
+.TikTokSymbol
+{
+	clear:both;
+	padding: 30px 0;
+}
+.TikTokSymbol .btn
+{
+	margin: 0 auto;
+}
+.TikTokSymbol .btn i
+{
+	color:#12114a;
+}
+
 /****************Результат проверки**********/
 
 /*************Modal*********/
@@ -1085,11 +1099,13 @@ body
 	.contract_bar 
 	{
 	  display: flex;
+	  position: relative;
 	  flex-wrap: wrap;
 	  align-items: center;
 	  margin-left: -20px;
 	  padding-left: 15px;
 	  border-radius: 0 0 8px 0px;
+	  padding-right: 22px;
 	  justify-content: space-around;
 	}
 	.contract__status_bar__text
@@ -1193,6 +1209,20 @@ body
       transform: translateX(0px);
     }
   }
+
+  .editContract
+  {
+  	display: none;
+  	color:#12114a;
+  	position: absolute;
+  	right: 5px;
+ 		top: 12px;
+ 		cursor: pointer;
+  }
+
+
+
+
 
 
 
@@ -1339,7 +1369,7 @@ body
 
 	.activities__bar .mobPayBtn
 	{
-		display: none:  !important;;
+		display: none;
 	}
 
 /*********Contract bar*********/
@@ -1750,7 +1780,6 @@ body
     }
 		.activities__bar .mobPayBtn
 			{
-				display: none:  !important;;
 			}
 
 
